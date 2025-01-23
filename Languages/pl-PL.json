@@ -1,0 +1,753 @@
+{
+  "errors": {
+    "noPermission": "Nie masz uprawnień do używania tego polecenia!\nWymagane pozwolenie: {{permission}}",
+    "noMusic": "Nie gra żadna muzyka!",
+    "invalidValue": "Prosimy o podanie ważnego {{type}} wartości pomiędzy {{min}} oraz {{max}}!",
+    "setupExists": "Panel sterowania już istnieje na tym serwerze! Użyj `setup delete`, aby go najpierw usunąć.",
+    "noSetup": "Na tym serwerze nie ma skonfigurowanego panelu sterowania Soundy.",
+    "setupError": "Wystąpił błąd podczas konfiguracji {{action}}.",
+    "filterError": "Wystąpił błąd podczas stosowania filtra.",
+    "premiumRequired": "Wykorzystałeś już wszystkie darmowe polecenia na dziś!\n\nZagłosuj na Soundy, aby uzyskać nieograniczony dostęp premium przez 14 godzin:"
+  },
+  "success": {
+    "filterApplied": "Zastosowany filtr {{filter}}!",
+    "languageSet": "Język serwera został ustawiony na: {{language}}."
+  },
+  "music": {
+    "nowplaying": "Teraz odtwarzane",
+    "artist": "Artysta",
+    "duration": "Czas trwania",
+    "requestedBy": "Żądane przez",
+    "node": "Node",
+    "finishTime": "Czas zakończenia",
+    "status": "**{{title}}** by **{{artist}}**",
+    "moved": "Bot został przeniesiony do kanału głosowego",
+    "setup": {
+      "title": "Odtwarzacz muzyczny Soundy",
+      "descriptions": "Dołącz do kanału głosowego i kolejkuj utwory według nazwy lub adresu URL w tym kanale.",
+      "node": "Node",
+      "finishTime": "Czas zakończenia"
+    }
+  },
+  "commands": {
+    "requestedBy": "Żądane przez {{user}}",
+    "configurations": {
+      "247": {
+        "enabled": "Tryb 24/7 został **włączony**! Będę teraz pozostawać na kanałach głosowych przez czas nieokreślony.",
+        "disabled": "Tryb 24/7 został **wyłączony**! Będę teraz opuszczał kanały głosowe, gdy będą nieaktywne.",
+        "error": "Wystąpił błąd podczas przełączania trybu 24/7."
+      },
+      "language": {
+        "current": "Aktualny język: `{{current}}`\nDostępne języki: {{available}}",
+        "invalid": "Nieprawidłowy kod języka!\nDostępne języki: {{available}}",
+        "success": "Język serwera został ustawiony na: `{{language}}`",
+        "error": "Nie udało się zaktualizować języka. Spróbuj ponownie."
+      },
+      "prefix": {
+        "current": "Aktualny prefiks: `{{current}}`\nDostępny prefiks: {{available}}",
+        "invalid": "Nieprawidłowy prefiks!\nDostępny prefiks: {{available}}",
+        "success": "Prefiks serwera został zmieniony na: `{{prefix}}`.",
+        "error": "Wystąpił błąd podczas aktualizacji prefiksu. Spróbuj ponownie później.",
+        "reset": "Prefiks serwera został zresetowany do domyślnego: `{{prefix}}`",
+        "length": "Prefiks nie może być dłuższy niż 5 znaków!"
+      },
+      "setup": {
+        "error": "Wystąpił błąd podczas tworzenia/usuwania kanału konfiguracji.",
+        "noPermission": "Nie masz uprawnień do używania tego polecenia!\nWymagane uprawnienie: `MANAGE_CHANNELS`",
+        "botNoPermission": "Bot nie ma wymaganych uprawnień!\nWymagane uprawnienie: `MANAGE_CHANNELS`",
+        "help": "Dostępne polecenia:\n`setup create` - Utwórz panel sterowania\n`setup delete` - Usuń panel sterowania",
+        "exists": "Panel sterowania już istnieje na tym serwerze! Użyj `setup delete`, aby go najpierw usunąć.",
+        "noSetup": "Na tym serwerze nie ma skonfigurowanego panelu sterowania Soundy.",
+        "created": "Pomyślnie utworzono panel sterowania Soundy w",
+        "deleted": "Pomyślnie usunięto panel sterowania Soundy!",
+        "deleteError": "Wystąpił błąd podczas usuwania konfiguracji."
+      },
+      "voicestatus": {
+        "noPermission": "YNie masz uprawnień do użycia tego polecenia!\nWymagane pozwolenie: `MANAGE_GUILD`",
+        "enabled": "Status głosowy został **włączony**!\n\nBot będzie teraz pokazywał aktualnie odtwarzany utwór w statusie kanału głosowego.",
+        "disabled": "Status głosowy został **wyłączony**!\n\nBot nie będzie już wyświetlał aktualnie odtwarzanego utworu w statusie kanału głosowego.",
+        "error": "Wystąpił błąd podczas przełączania stanu głosu."
+      }
+    },
+    "filters": {
+      "noMusic": "Nie gra żadna muzyka!",
+      "success": "Zastosowano filtr audio {{filter}}!",
+      "error": "Wystąpił błąd podczas stosowania filtra.",
+      "clear": {
+        "success": "Wyczyść wszystkie aktywne filtry!",
+        "error": "Wystąpił błąd podczas czyszczenia filtrów."
+      },
+      "reset": {
+        "success": "Zresetuj wszystkie filtry do wartości domyślnych!",
+        "error": "Wystąpił błąd podczas resetowania filtrów."
+      },
+      "equalizer": {
+        "noBand": "Podaj zarówno wartości pasma (0-13), jak i wzmocnienia (-0,25 do 1,0)!",
+        "invalidBand": "Pasmo musi zawierać się w przedziale od 0 do 13!",
+        "invalidGain": "Wzmocnienie musi wynosić od -0,25 do 1,0!",
+        "success": "Ustalono pasmo **{{band}}** na wzmocnienie: **{{gain}}**"
+      },
+      "pitch": {
+        "noPitch": "Podaj prawidłową wartość pitch pomiędzy 0,5 a 2,0!",
+        "success": "Pitch ustawione na: **{{pitch}}x**",
+        "error": "Wystąpił błąd podczas ustawiania pitchu."
+      },
+      "rate": {
+        "noRate": "Podaj prawidłową wartość współczynnika w zakresie od 0,5 do 2,0.!",
+        "success": "Współczynnik ustawiony na: **{{rate}}x**",
+        "error": "Wystąpił błąd podczas ustawiania współczynnika."
+      },
+      "speed": {
+        "noSpeed": "Podaj prawidłową wartość prędkości w zakresie od 0,5 do 2,0!",
+        "success": "Prędkość ustawiona na: **{{speed}}x**",
+        "error": "Wystąpił błąd podczas ustawiania prędkości."
+      }
+    },
+    "informations": {
+        "about": {
+          "description": "Jestem botem muzycznym z bajerami, który dostarcza muzykę na najwyższym poziomie na Discordzie.",
+          "features": "Główne funkcje",
+          "featuresList": [
+            "Wysoka jakość odtwarzania muzyki",
+            "Wsparcie dla wielu źródeł muzycznych",
+            "Zaawansowane zarządzanie kolejką",
+            "System ról DJ-a",
+            "Własne playlisty",
+            "I wiele więcej!"
+          ],
+          "credits": "Podziękowania",
+          "creditsInfo": "- Współtwórcy: iaMJ\n- Twórcy: Tronix Development\n- Kraj: Indonezja",
+          "specialThanks": "Specjalne podziękowania",
+          "specialThanksList": "- iaMJ: Twórca Soundy\n- kydo: Za funkcję autouzupełniania, poprawki i inne wkłady\n- L RMN: Za konfiguracje filtrów\n- Appu: Za pomysł na bota",
+          "communities": "Społeczności",
+          "communitiesList": "Społeczność Tronix Development\nWszyscy współtwórcy i wspierający",
+          "license": "Licencja",
+          "licenseInfo": "Projekt jest objęty licencją GNU Affero General Public License v3.0",
+          "footer": "Zrobione z 🐈 przez Tronix Development w Indonezji",
+          "notYourButton": "To nie jest Twój guzik, cwaniaczku!",
+          "error": "Wystąpił błąd podczas pobierania informacji o bocie.",
+          "aboutMe": "O mnie",
+          "botName": "O Soundy",
+          "contributorsTitle": "Współtwórcy Soundy",
+          "links": "Linki",
+          "buttons": {
+            "about": "O mnie",
+            "contributors": "Współtwórcy",
+            "inviteBot": "Zaproś bota",
+            "supportServer": "Serwer wsparcia",
+            "voteForMe": "Zagłosuj na mnie",
+            "viewLicense": "Zobacz licencję"
+          }
+        }
+      },
+      "faq": {
+        "title": "Często Zadawane Pytania",
+        "description": "Oto kilka najczęstszych pytań o Soundy:",
+        "questions": {
+          "invite": {
+            "question": "1. Jak zaprosić Soundy na mój serwer?",
+            "answer": "Użyj komendy `{{prefix}}invite` albo kliknij [tutaj](https://discord.com/oauth2/authorize?client_id=1168385371294420992), żeby mnie zaprosić!",
+            "slashAnswer": "Użyj komendy `/invite` albo kliknij [tutaj](https://discord.com/oauth2/authorize?client_id=1168385371294420992), żeby mnie zaprosić!"
+          },
+          "support": {
+            "question": "2. Jak mogę wspierać bota?",
+            "answer": "Możesz zagłosować na Soundy na Top.gg, używając komendy `{{prefix}}vote`!",
+            "slashAnswer": "Możesz zagłosować na Soundy na Top.gg, używając komendy `/vote`!"
+          },
+          "features": {
+            "question": "3. Jakie są główne funkcje Soundy?",
+            "answer": "Soundy to potężny bot muzyczny z wysokiej jakości dźwiękiem, filtrami i intuicyjnym interfejsem! Idealny do imprez!"
+          },
+          "bugs": {
+            "question": "4. Jak zgłosić błąd?",
+            "answer": "Dołącz do naszego serwera wsparcia i zgłoś problem na odpowiednim kanale."
+          },
+          "suggestions": {
+            "question": "5. Jak mogę zasugerować nowe funkcje?",
+            "answer": "Dołącz do naszego serwera wsparcia i zaproponuj swoje pomysły. Im bardziej kreatywnie, tym lepiej!"
+          },
+          "commands": {
+            "question": "6. Gdzie znajdę pełną listę komend?",
+            "answer": "Użyj komendy `{{prefix}}help`, aby zobaczyć wszystkie dostępne komendy i kategorie.",
+            "slashAnswer": "Użyj komendy `/help`, aby zobaczyć wszystkie dostępne komendy i kategorie."
+          },
+          "troubleshooting": {
+            "question": "7. Jak naprawić problemy z odtwarzaniem muzyki?",
+            "answer": "Jeśli Soundy nie odtwarza muzyki, spróbuj tych kroków:\n1. Upewnij się, że jesteś na kanale głosowym\n2. Sprawdź, czy Soundy ma uprawnienia do dołączenia i mówienia\n3. Upewnij się, że link do muzyki lub zapytanie są poprawne\n4. Spróbuj rozłączyć i ponownie połączyć Soundy\n5. Jeśli problem nadal występuje, dołącz do naszego serwera wsparcia po pomoc"
+          },
+          "filters": {
+            "question": "8. Jak używać filtrów?",
+            "answer": "Soundy oferuje różne filtry dźwiękowe, takie jak nightcore, bassboost, 8D itd. Użyj odpowiednich komend (np. `{{prefix}}nightcore`, `{{prefix}}bassboost`) podczas odtwarzania muzyki.",
+            "slashAnswer": "Soundy oferuje różne filtry dźwiękowe, takie jak nightcore, bassboost, 8D itd. Użyj odpowiednich komend (np. `/nightcore`, `/bassboost`) podczas odtwarzania muzyki."
+          }
+        }
+      },
+      "help": {
+        "title": "Menu Pomocy Soundy",
+        "description": "Oto wszystkie dostępne komendy i kategorie:",
+        "noDescription": "Brak opisu",
+        "mainMenu": {
+          "title": "Menu Pomocy Soundy",
+          "greeting": {
+            "1": "**Cześć!**",
+            "2": "**Jestem**",
+            "3": "**Twoim muzycznym kumplem!**"
+          },
+          "description": "**Soundy to bot muzyczny stworzony, aby zapewnić niesamowite wrażenia muzyczne na Discordzie. Dzięki szerokim możliwościom i łatwości obsługi, Soundy to idealny wybór dla Twojego serwera.**",
+          "categories": {
+            "configurations": "Konfiguracje",
+            "devs": "Deweloperzy",
+            "filters": "Filtry",
+            "informations": "Informacje",
+            "music": "Muzyka",
+            "playlists": "Playlisty"
+          },
+          "selectPrompt": "**Wybierz kategorię z menu poniżej.**",
+          "footer": "Dziękujemy, że wybrałeś Soundy!"
+        },
+        "categoryMenu": {
+          "title": "Komendy kategorii {{category}}",
+          "titleWithPages": "Komendy kategorii {{category}} (Strona {{current}}/{{total}})",
+          "description": "Lista dostępnych komend w tej kategorii:",
+          "notYourMenu": "To menu nie jest dla Ciebie!",
+          "error": "Ups! Wygląda na to, że napotkałem błąd podczas próby pomocy. \nMoje obwody mogą być trochę przeciążone. \nSpróbuj proszę ponownie później. Jeśli problem będzie się powtarzał, \ndaj znać moim twórcom. Gomen nasai!"
+        }
+      },
+      "info": {
+        "mainMenu": {
+          "title": "Menu informacji Soundy",
+          "description": {
+            "1": "**Witam!**",
+            "2": "**Witamy w menu informacyjnym!**",
+            "3": "**Tutaj można znaleźć szczegółowe informacje na temat różnych aspektów Soundy:**",
+            "4": "**Informacje o kliencie**",
+            "5": "**Statystyki**",
+            "6": "**Informacje o systemie**",
+            "7": "**Wszystkie informacje**",
+            "8": "**Wybierz kategorię z menu poniżej.**",
+            "9": "Zaproś mnie",
+            "10": "Serwer wsparcia"
+          }
+        },
+        "categories": {
+          "client": {
+            "title": "Informacje o kliencie",
+            "fields": {
+              "username": "Username",
+              "apiLatency": "API Latency",
+              "responseTime": "Response Time",
+              "uptime": "Uptime",
+              "discordjs": "Discord.js"
+            }
+          },
+          "stats": {
+            "title": "Statystyki",
+            "fields": {
+              "serverCount": "Liczba serwerów",
+              "userCount": "Liczba użytkowników",
+              "channelCount": "Liczba kanałów",
+              "activePlayers": "Aktywni gracze",
+              "connectedNodes": "Połączone węzły",
+              "cluster": "Cluster",
+              "shard": "Shard"
+            }
+          },
+          "system": {
+            "title": "Informacje o systemie",
+            "fields": {
+              "os": "OS",
+              "cpu": "CPU",
+              "vcore": "vCore",
+              "ram": "RAM",
+              "memoryUsage": "Wykorzystanie pamięci",
+              "bun": "Bun",
+              "node": "Node.js"
+            }
+          },
+          "all": "All Information"
+        },
+        "selectMenu": {
+          "placeholder": "Wybierz kategorię informacji",
+          "options": {
+            "mainMenu": {
+              "label": "Menu główne",
+              "description": "Powrót do menu głównego"
+            },
+            "clientInfo": {
+              "label": "Informacje o kliencie",
+              "description": "Wyświetlanie informacji o kliencie bota"
+            },
+            "statsInfo": {
+              "label": "Statystyki",
+              "description": "Wyświetl statystyki botów"
+            },
+            "systemInfo": {
+              "label": "Informacje o systemie",
+              "description": "Wyświetlanie informacji o systemie"
+            },
+            "allInfo": {
+              "label": "Wszystkie informacje",
+              "description": "Wyświetl wszystkie informacje o botach"
+            }
+          }
+        },
+        "errors": {
+          "notYourMenu": "To menu nie jest dla Ciebie!",
+          "generic": "Wystąpił błąd podczas pobierania informacji o botach."
+        }
+      },
+      "node": {
+        "title": "Status węzła Soundy",
+        "description": "Wybierz węzeł z poniższego menu, aby wyświetlić szczegółowe informacje",
+        "footer": "Informacje o stanie węzła",
+        "selectMenu": {
+          "placeholder": "Wybierz węzeł do wyświetlenia",
+          "status": {
+            "connected": "Połączony",
+            "disconnected": "Odłączony"
+          }
+        },
+        "nodeInfo": {
+          "players": "Players",
+          "playingPlayers": "Playing Players",
+          "uptime": "Uptime",
+          "cpu": {
+            "title": "CPU",
+            "cores": "Cores",
+            "systemLoad": "System Load",
+            "lavalinkLoad": "Lavalink Load"
+          },
+          "memory": {
+            "title": "Memory",
+            "used": "Used",
+            "reservable": "Reservable"
+          }
+        },
+        "errors": {
+          "notYourMenu": "To menu nie jest dla Ciebie!",
+          "nodeNotFound": "Node not found!"
+        }
+      },
+      "ping": {
+        "title": "Opóźnienie bota",
+        "pinging": "Pingowanie...",
+        "footer": "Informacje o opóźnieniu Soundy",
+        "latency": "Opóźnienie",
+        "apiLatency": "Opóźnienie API"
+      },
+      "vote": {
+        "title": "Głosuj na Soundy'ego!",
+        "description": {
+          "header": "Wesprzyj bota, głosując na niego na Top.gg!",
+          "note": "Uwaga: Głosować można raz na 12 godzin!",
+          "voteLink": "Link do głosowania: [Kliknij tutaj, aby zagłosować].",
+          "message": "Jesteś niesamowity, że nas wybrałeś! Niech Twój dzień będzie wypełniony fantastycznymi utworami i dobrymi wibracjami. Niech muzyka gra dalej!"
+        },
+        "footer": "Dziękujemy za wsparcie!",
+        "buttons": {
+          "vote": "Głosować",
+          "invite": "Zaprosić"
+        },
+        "translators": {
+          "title": "Tłumacze botów",
+          "description": "Oto wszyscy niesamowici ludzie, którzy pomogli w tłumaczeniu tego bota:",
+          "contribute": "Przyczyń się do tłumaczenia"
+        }
+      },
+    "music": {
+        "noPlayer": {
+            "title": "Brak aktywnego odtwarzacza",
+            "description": "Ups! W tej chwili nie odbywa się tu żadna impreza muzyczna. \nSpróbuj najpierw zagrać kilka utworów!"
+        },
+        "notInVoice": {
+            "title": "Nie w kanale głosowym",
+            "description": "Hej, odkrywco muzyki!\nWygląda na to, że unosisz się w cyfrowej przestrzeni - dołącz najpierw do kanału głosowego i odkryjmy razem niesamowite utwory!"
+        },
+        "notInSameVoice": {
+            "title": "Nie w tym samym kanale głosowym",
+            "description": "Ups! Musimy być na tym samym kanale głosowym, aby razem jamować! Dołącz do mnie tam, gdzie jestem!"
+        },
+        "noTracks": {
+            "title": "Brak utworów w kolejce",
+            "description": "Scena jest pusta i czeka na twój muzyczny wybór!\nDodaj kilka utworów, aby stworzyć idealną listę odtwarzania."
+        },
+        "notForYou": "To menu nie jest dla Ciebie!",
+        "autoplay": {
+          "enabled": "Tryb autoodtwarzania jest teraz dostępny **włączony**!",
+          "disabled": "Tryb autoodtwarzania jest teraz dostępny **wyłączony**!",
+          "error": "Ups! Coś poszło nie tak podczas przełączania autoodtwarzania. Spróbuj ponownie!"
+        },
+        "clearqueue": {
+          "title": "Kolejka wyczyszczona",
+          "description": "Wszystkie utwory zostały usunięte z kolejki.!\nGotowy na świeże utwory?",
+          "alreadyEmpty": {
+            "title": "Kolejka jest już pusta",
+            "description": "Kolejka jest już pusta! Nie ma tu nic do wyczyszczenia."
+          }
+        },
+        "forward": {
+            "title": "Przekazana ścieżka",
+            "description": "Ścieżka przesunięta o 10 sekund!",
+            "error": {
+                "title": "Nie można przekroczyć czasu trwania ścieżki",
+                "description": "Ups! Nie możemy przejść dalej niż czas trwania utworu! Pozostańmy w rytmie!"
+            }
+        },
+        "grab": {
+            "title": "Zapisany utwór",
+            "description": "Muzyczna niespodzianka czeka na Ciebie w Twoim DM! Sprawdź to!",
+            "np": "Teraz odtwarzane",
+            "songInfo": {
+                "title": "Tytuł",
+                "url": "URL",
+                "duration": "Czas trwania",
+                "requestedBy": "Żądane przez"
+            },
+            "error": {
+                "title": "Nie można wysłać DM",
+                "description": "Ups! Wygląda na to, że twoja forteca DM jest nie do zdobycia. Dostosuj ustawienia prywatności, aby otrzymać melodyjną wiadomość!"
+            },
+            "sentToDM": {
+                "title": "Utwór jest zapisany!",
+                "description": "Wysłałem szczegóły utworu na twój DM!"
+            },
+            "footer": "Ciesz się muzyką! 🎧"
+        },
+        "join": {
+            "success": {
+                "title": "Udane połączenie",
+                "description": "Woohoo! Rozbiłem imprezę w {channel}! Czas podkręcić głośność i stworzyć trochę muzycznej magii!"
+            },
+            "failed": {
+                "title": "Nie udało się dołączyć",
+                "description": "Ups! Wygląda na to, że nie udało mi się dołączyć! Problemy techniczne: {error}"
+            }
+        },
+        "leave": {
+            "title": "Lewy kanał głosowy",
+            "description": "Impreza zakończona! Wyczyściłem kolejkę i opuściłem kanał.\nGotowy na kolejną muzyczną przygodę!",
+            "error": {
+                "title": "Błąd",
+                "description": "Whoopsie daisy! Wygląda na to, że muzyka nieco zaplątała się we własny rytm.\nSpróbuj jeszcze raz za chwilę, gdy rytm znów będzie zsynchronizowany!"
+            }
+        },
+        "loop": {
+            "title": "Tryb pętli",
+            "description": "Wybierz tryb pętli z poniższego menu!",
+            "modes": {
+                "disabled": "Tryb pętli: **Wyłączony**",
+                "track": "Tryb pętli: **Track**",
+                "queue": "Tryb pętli: **Queue**"
+            },
+            "menu": {
+                "placeholder": "Wybór trybu pętli",
+                "options": {
+                    "disable": {
+                        "label": "Wyłącz",
+                        "description": "Wyłączenie wszystkich trybów pętli"
+                    },
+                    "track": {
+                        "label": "Utwór",
+                        "description": "Zapętlenie bieżącej utwóra"
+                    },
+                    "queue": {
+                        "label": "Kolejka",
+                        "description": "Pętla całej kolejki"
+                    }
+                }
+            },
+            "timeout": {
+                "title": "Upłynął limit czasu wyboru pętli",
+                "description": "Ups! Wygląda na to, że nie dokonałeś wyboru na czas!"
+            }
+        },
+        "lyrics": {
+            "title": "Tekst utwora {{song}}",
+            "searching": "Wyszukiwanie tekstów...",
+            "noQuery": {
+                "description": "Podaj nazwę utworu lub odtwórz go najpierw!"
+            },
+            "invalidUrl": {
+                "description": "Nie można rozwiązać adresu URL muzyki."
+            },
+            "notFound": {
+                "description": "Nie znaleziono tekstu dla tego utworu."
+            },
+            "error": {
+                "description": "Nie udało się pobrać tekstu. Spróbuj ponownie później."
+            }
+        },
+        "nowplaying": {
+            "title": "Teraz odtwarzane",
+            "artist": "Artysta",
+            "duration": "Czas trwania",
+            "requestedBy": "Żądane przez"
+        },
+        "pause": {
+            "alreadyPaused": {
+                "title": "Już wstrzymane",
+                "description": "Melodia jest już w sennej pauzie!\nTo tak, jakby muzyka ucinała sobie spokojną drzemkę."
+            },
+            "paused": {
+                "title": "Wstrzymane",
+                "description": "Rytm został delikatnie zawieszony!\nTwoja muzyczna podróż ma magiczną przerwę."
+            }
+        },
+        "play": {
+            "noQuery": {
+                "title": "Brakujące zapytanie",
+                "description": "Hey! Podaj nazwę utworu lub adres URL, abym mógł go odtworzyć."
+            },
+            "missingPermissions": {
+                "title": "Brakujące uprawnienia",
+                "description": "Nie mam pozwolenia na dołączenie i wypowiadanie się na twoim kanale głosowym!"
+            },
+            "connectionError": {
+                "title": "Błąd połączenia",
+                "description": "Nie udało się połączyć z kanałem głosowym. Spróbuj ponownie."
+            },
+            "noResults": {
+                "title": "Nie znaleziono wyników",
+                "description": "Ups! Nie mogłem znaleźć nic dla: \"{query}\". Może spróbować czegoś innego?"
+            },
+            "addedPlaylist": {
+                "title": "Dodano listę odtwarzania do kolejki",
+                "tracks": "Utwory",
+                "requestedBy": "Żądane przez"
+            },
+            "addedTrack": {
+                "title": "Dodano do kolejki",
+                "artist": "Artysta",
+                "duration": "Czas trwania",
+                "requestedBy": "Żądane przez"
+            },
+            "error": {
+                "title": "Wystąpił błąd",
+                "description": "Ups! Coś poszło nie tak podczas próby odtworzenia muzyki. Spróbuj ponownie!"
+            }
+        },
+        "previous": {
+            "noPrevious": {
+                "title": "Brak poprzedniego utworu",
+                "description": "Ups! Nie ma poprzedniego utworu do odtworzenia!\nKontynuujmy zabawę z obecnym!"
+            },
+            "playing": {
+                "title": "Odtwarzanie poprzedniego utworu",
+                "description": "Przewijanie muzycznej podróży do początku!\nCzas jeszcze raz zagłębić się w tym niesamowitym utworze!"
+            }
+        },
+        "queue": {
+            "title": "Kolejka",
+            "nowPlaying": "Teraz odtwarzane",
+            "upNext": "Następna",
+            "noTracks": "Brak utworów w kolejce",
+            "footer": "Wyświetlanie pierwszych 10 utworów • Łączna liczba utworów: {{total}}"
+        },
+        "replay": {
+            "noTrack": {
+                "title": "Brak odtwarzania utworu",
+                "description": "Nie ma aktualnie odtwarzanego utworu do odtworzenia!\nSpróbuj najpierw coś włączyć!"
+            },
+            "success": {
+                "title": "Odtwarzanie utworu",
+                "description": "Przewijanie muzycznej podróży do początku!\nCzas jeszcze raz zagłębić się w tym niesamowitym utworze!"
+            }
+        },
+        "resume": {
+            "alreadyPlaying": {
+                "title": "Już gramy",
+                "description": "Muzyka już gra!\nNiech impreza trwa dalej!"
+            },
+            "success": {
+                "title": "Wznowienie",
+                "description": "Muzyka została wznowiona!\nNiech impreza trwa dalej!"
+            }
+        },
+        "rewind": {
+            "title": "Przewijanie",
+            "description": "Ścieżka przewinięta o 10 sekund!"
+        },
+        "search": {
+            "title": "Wyniki wyszukiwania dla \"{{query}}\"",
+            "selectTrack": "Wybierz utwór",
+            "noQuery": {
+                "title": "Brakujące zapytanie",
+                "description": "Podaj zapytanie wyszukiwania!"
+            },
+            "invalidUrl": {
+                "title": "Nieprawidłowe wyszukiwanie",
+                "description": "Użyj polecenia {{prefix}}play dla bezpośrednich linków. To polecenie służy do wyszukiwania utworów według nazwy.",
+                "slashDescription": "Użyj polecenia /play, aby uzyskać bezpośrednie linki. To polecenie służy do wyszukiwania utworów według nazwy."
+            },
+            "missingPermissions": {
+                "title": "Brakujące uprawnienia",
+                "description": "Potrzebuję pozwolenia na dołączenie i wypowiadanie się na Twoim kanale głosowym!"
+            },
+            "noResults": {
+                "title": "Nie znaleziono wyników",
+                "description": "Ups! Wygląda na to, że nie mogliśmy znaleźć żadnych utworów dla tego wyszukiwania.\nSpróbujmy użyć innego słowa kluczowego lub frazy!"
+            },
+            "notInSameVoice": {
+                "title": "Nie w tym samym kanale głosowym",
+                "description": "Ups! Musimy być na tym samym kanale głosowym, aby razem jamować! Dołącz do mnie tam, gdzie jestem!"
+            },
+            "connectionError": {
+                "title": "Błąd połączenia",
+                "description": "Nie udało się połączyć z kanałem głosowym. Spróbuj ponownie."
+            },
+            "error": {
+                "title": "Błąd",
+                "description": "Wystąpił błąd podczas wyszukiwania utworów."
+            },
+            "addedToQueue": {
+                "title": "Dodano do kolejki"
+            },
+            "track": {
+                "title": "Utwór",
+                "artist": "Artysta",
+                "duration": "Czas trwania",
+                "requestedBy": "Żądane przez"
+            }
+        },
+        "seek": {
+            "title": "Przewinięto",
+            "description": "Przewinięto do: {{position}}!\nNiech impreza trwa z obecnym utworem!",
+            "missingPosition": {
+                "title": "Brakująca pozycja",
+                "description": "Podaj pozycję, do której chcesz przewinąć (np. 1:30 lub 90)"
+            },
+            "invalidFormat": {
+                "title": "Nieprawidłowy format",
+                "description": "Użyj formatu minuty:sekundy (np. 1:30) lub sekundy (np. 90)"
+            },
+            "cannotSeek": {
+                "title": "Nie można przewinąć",
+                "description": "Nie można określić długości utworu!"
+            },
+            "invalidPosition": {
+                "title": "Nieprawidłowa pozycja",
+                "description": "Pozycja musi mieścić się w zakresie od 0 do {{duration}}!"
+            }
+        },
+        "shuffle": {
+            "title": "Przetasowane",
+            "description": "Kolejka właśnie zyskała nową mieszankę! Twoje piosenki tańczą teraz w nowym rytmie!",
+            "notEnoughSongs": {
+                "title": "Za mało utworów w kolejce",
+                "description": "Ups! Potrzebujemy co najmniej dwóch utworów w kolejce, aby je przetasować! Dodajmy więcej utworów do miksu!"
+            }
+        },
+        "skip": {
+            "title": "Pominięto",
+            "description": "Woosh! Przejście do {{nextTrack}}!\nGotowy na więcej muzycznej magii?",
+            "nextTrack": "następny utwór",
+            "recommendedTrack": "Niesamowity, godny polecenia utwór",
+            "queueEmpty": {
+                "title": "Kolejka pusta",
+                "description": "To koniec! Na razie dotarliśmy do końca naszej muzycznej podróży.\nCzas na nowy początek z nowymi utworami!"
+            }
+        },
+        "stop": {
+            "title": "Muzyka zatrzymana",
+            "description": "Impreza zakończona! Wyczyściłem kolejkę i spakowałem głośniki.\nGotowy na kolejną muzyczną przygodę!",
+            "error": {
+                "title": "Błąd",
+                "description": "Whoopsie daisy! Wygląda na to, że muzyka nieco zaplątała się we własny rytm.\nSpróbuj jeszcze raz za chwilę, gdy rytm znów będzie zsynchronizowany!"
+            }
+        },
+        "volume": {
+            "title": "Ustawianie głosnośći",
+            "description": "Podkręcamy wibracje! Poziom głośności wynosi teraz **{{volume}}%**.",
+            "invalidVolume": {
+                "title": "Nieprawidłowa głosność",
+                "description": "Podaj prawidłowy poziom głośności w zakresie od 0 do 100!"
+            }
+        }
+    },
+    "playlist": {
+        "create": {
+            "title": "Utworzona lista odtwarzania",
+            "description": "Utworzona lista odtwarzania: **{{nazwa}}**.",
+            "error": {
+                "title": "Błąd",
+                "description": "Podaj nazwę listy odtwarzania!",
+                "exists": "Lista odtwarzania o tej nazwie już istnieje!"
+            }
+        },
+        "list": {
+            "title": "Twoje listy odtwarzania",
+            "empty": {
+                "title": "Brak list odtwarzania",
+                "description": "Nie masz żadnych list odtwarzania!"
+            }
+        },
+        "view": {
+            "error": {
+                "title": "Błąd",
+                "description": "Podaj nazwę listy odtwarzania!",
+                "notFound": "Nie znaleziono listy odtwarzania!",
+                "empty": "Brak utworów na tej liście odtwarzania"
+            }
+        },
+        "add": {
+            "title": "Dodano ścieżkę",
+            "description": "{{message}} do listy odtwarzania: **{{playlistName}}**.",
+            "error": {
+                "title": "Błąd",
+                "description": "Podaj nazwę listy odtwarzania i zapytanie!",
+                "notFound": "Nie znaleziono listy odtwarzania!",
+                "noTracks": "Nie znaleziono żadnych śladów!",
+                "failed": "Wystąpił błąd podczas dodawania utworów do listy odtwarzania!"
+            },
+            "searching": "🔍 Wyszukiwanie..."
+        },
+        "remove": {
+            "title": "Usunięto utwór",
+            "description": "Usunięto utwór z listy odtwarzania: **{{name}}**.",
+            "error": {
+                "title": "Błąd",
+                "description": "Podaj nazwę listy odtwarzania i numer utworu!",
+                "notFound": "Nie znaleziono listy odtwarzania!",
+                "invalidTrack": "Nieprawidłowy numer ścieżki!"
+            }
+        },
+        "delete": {
+            "title": "Lista odtwarzania usunięta",
+            "description": "Usunięta lista odtwarzania: **{{name}}**.",
+            "error": {
+                "title": "Błąd",
+                "description": "Podaj nazwę listy odtwarzania!",
+                "notFound": "Playlist not found!"
+            }
+        },
+        "load": {
+            "title": "Lista odtwarzania załadowana",
+            "description": "Wczytano **{{trackCount}}** utworów z listy odtwarzania: **{{name}}**",
+            "error": {
+                "title": "Błąd",
+                "description": "Podaj nazwę listy odtwarzania!",
+                "notFound": "Lista odtwarzania nie została znaleziona lub jest pusta!",
+                "noVoice": "Musisz być na kanale głosowym!"
+            },
+            "loading": "🔍 Ładowanie listy odtwarzania..."
+        },
+        "error": {
+            "title": "Błąd",
+            "description": "Wystąpił błąd podczas zarządzania listami odtwarzania!",
+            "invalidSubcommand": "Nieprawidłowa podkomenda! Użyj `create`, `list`, `view`, `add`, `remove`, `delete` lub `load`."
+        },
+        "embed": {
+            "name": "Listy odtwarzania {{name}}",
+            "description": "{{description}}",
+            "footer": "Strona {{page}}/{{pages}} • Łączna liczba list odtwarzania: {{total}}",
+            "tracks": "Łączna liczba utworów: {{total}}",
+            "track": "Przez: {{author}} • Czas trwania: {{duration}}"
+        },
+        "buttons": {
+            "prev": "Poprzedni",
+            "next": "Następny",
+            "invalid": "Nie możesz używać tych przycisków!"
+        }
+    }
+  }
+}
