@@ -236,7 +236,9 @@
               "apiLatency": "Latensi API",
               "responseTime": "Waktu Respons",
               "uptime": "Waktu Aktif",
-              "discordjs": "Discord.js"
+              "discordjs": "Discord.js",
+              "cluster": "Cluster",
+              "shard": "Shard"
             }
           },
           "stats": {
@@ -246,9 +248,7 @@
               "userCount": "Jumlah Pengguna",
               "channelCount": "Jumlah Saluran",
               "activePlayers": "Pemain Aktif",
-              "connectedNodes": "Node Terhubung",
-              "cluster": "Cluster",
-              "shard": "Shard"
+              "connectedNodes": "Node Terhubung"
             }
           },
           "system": {
