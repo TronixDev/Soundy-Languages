@@ -1,0 +1,745 @@
+{
+  "errors": {
+    "noPermission": "このコマンドを使用する権限がありません！\n必要な権限: {{permission}}",
+    "noMusic": "音楽が再生されていません！",
+    "invalidValue": "有効な{{type}}値を{{min}}から{{max}}の間で指定してください！",
+    "setupExists": "コントロールパネルはすでにこのサーバーに存在します！削除するには`setup delete`を使用してください。",
+    "noSetup": "このサーバーにSoundyコントロールパネルが設定されていません。",
+    "setupError": "セットアップの{{action}}中にエラーが発生しました。",
+    "filterError": "フィルターの適用中にエラーが発生しました。",
+    "premiumRequired": "今日の無料コマンドをすべて使用しました！\n\n14時間のプレミアムアクセスを無制限に取得するには、Soundyに投票してください："
+  },
+  "success": {
+    "filterApplied": "{{filter}}フィルターを適用しました！",
+    "languageSet": "サーバー言語を設定しました：{{language}}"
+  },
+  "music": {
+    "nowplaying": "再生中",
+    "artist": "アーティスト",
+    "duration": "再生時間",
+    "requestedBy": "リクエスト者",
+    "node": "ノード",
+    "finishTime": "終了時間",
+    "status": "**{{artist}}**による**{{title}}**",
+    "moved": "ボットがボイスチャンネルに移動しました",
+    "setup": {
+      "title": "Soundy ミュージックプレーヤー",
+      "descriptions": "ボイスチャンネルに参加し、このチャンネルで曲名またはURLで曲をキューに追加してください。",
+      "node": "ノード",
+      "finishTime": "終了時間"
+    }
+  },
+  "commands": {
+    "requestedBy": "{{user}}によるリクエスト",
+    "configurations": {
+      "247": {
+        "enabled": "24/7モードが**有効**になりました！\n\nボイスチャンネルに無期限に滞在します。",
+        "disabled": "24/7モードが**無効**になりました！\n\n非アクティブ時にボイスチャンネルから退出します。",
+        "error": "24/7モードの切り替え中にエラーが発生しました。"
+      },
+      "language": {
+        "current": "現在の言語：`{{current}}`\n利用可能な言語：{{available}}",
+        "invalid": "無効な言語コードです！\n利用可能な言語：{{available}}",
+        "success": "サーバー言語を設定しました：`{{language}}`",
+        "error": "言語の更新に失敗しました。もう一度お試しください。"
+      },
+      "prefix": {
+        "current": "現在のプレフィックス：`{{current}}`\n利用可能なプレフィックス：{{available}}",
+        "invalid": "無効なプレフィックスです！\n利用可能なプレフィックス：{{available}}",
+        "success": "サーバーのプレフィックスを変更しました：`{{prefix}}`",
+        "error": "プレフィックスの更新中にエラーが発生しました。後でもう一度お試しください。",
+        "reset": "サーバーのプレフィックスをデフォルトにリセットしました：`{{prefix}}`",
+        "length": "プレフィックスは5文字以下にしてください！"
+      },
+      "setup": {
+        "error": "セットアップチャンネルの作成/削除中にエラーが発生しました。",
+        "noPermission": "このコマンドを使用する権限がありません！\n必要な権限：`MANAGE_CHANNELS`",
+        "botNoPermission": "ボットに必要な権限がありません！\n必要な権限：`MANAGE_CHANNELS`",
+        "help": "利用可能なコマンド：\n`setup create` - コントロールパネルを作成\n`setup delete` - コントロールパネルを削除",
+        "exists": "コントロールパネルはすでにこのサーバーに存在します！削除するには`setup delete`を使用してください。",
+        "noSetup": "このサーバーにSoundyコントロールパネルが設定されていません。",
+        "created": "Soundyコントロールパネルを正常に作成しました：",
+        "deleted": "Soundyコントロールパネルを正常に削除しました！",
+        "deleteError": "セットアップの削除中にエラーが発生しました。"
+      },
+      "voicestatus": {
+        "noPermission": "このコマンドを使用する権限がありません！\n必要な権限：`MANAGE_GUILD`",
+        "enabled": "ボイスステータスが**有効**になりました！\n\nボットはボイスチャンネルのステータスに現在再生中の曲を表示します。",
+        "disabled": "ボイスステータスが**無効**になりました！\n\nボットはボイスチャンネルのステータスに現在再生中の曲を表示しなくなります。",
+        "error": "ボイスステータスの切り替え中にエラーが発生しました。"
+      }
+    },
+    "filters": {
+      "noMusic": "音楽が再生されていません！",
+      "success": "{{filter}}オーディオフィルターを適用しました！",
+      "error": "フィルターの適用中にエラーが発生しました。",
+      "clear": {
+        "success": "すべてのアクティブなフィルターをクリアしました！",
+        "error": "フィルターのクリア中にエラーが発生しました。"
+      },
+      "reset": {
+        "success": "すべてのフィルターをデフォルト値にリセットしました！",
+        "error": "フィルターのリセット中にエラーが発生しました。"
+      },
+      "equalizer": {
+        "noBand": "バンド（0-13）とゲイン（-0.25から1.0）の両方の値を指定してください！",
+        "invalidBand": "バンドは0から13の間である必要があります！",
+        "invalidGain": "ゲインは-0.25から1.0の間である必要があります！",
+        "success": "バンド**{{band}}**のゲインを**{{gain}}**に設定しました"
+      },
+      "pitch": {
+        "noPitch": "0.5から2.0の間の有効なピッチ値を指定してください！",
+        "success": "ピッチを**{{pitch}}x**に設定しました",
+        "error": "ピッチの設定中にエラーが発生しました。"
+      },
+      "rate": {
+        "noRate": "0.5から2.0の間の有効なレート値を指定してください！",
+        "success": "レートを**{{rate}}x**に設定しました",
+        "error": "レートの設定中にエラーが発生しました。"
+      },
+      "speed": {
+        "noSpeed": "0.5から2.0の間の有効なスピード値を指定してください！",
+        "success": "スピードを**{{speed}}x**に設定しました",
+        "error": "スピードの設定中にエラーが発生しました。"
+      }
+    },
+    "informations": {
+      "about": {
+        "description": "私はDiscordで高品質な音楽再生体験を提供するために設計された機能豊富な音楽ボットです。",
+        "features": "主な機能",
+        "featuresList": [
+          "高品質な音楽再生",
+          "複数の音楽ソースのサポート",
+          "高度なキュー管理",
+          "DJロールシステム",
+          "カスタムプレイリスト",
+          "そしてさらに多くの機能！"
+        ],
+        "credits": "クレジット",
+        "creditsInfo": "- 貢献者：iaMJ\n- 開発者：Tronix Development\n- 国：インドネシア",
+        "specialThanks": "特別な感謝",
+        "specialThanksList": "- iaMJ：Soundyの作者\n- kydo：オートコンプリート機能、バグ修正、その他の貢献\n- L RMN：フィルター設定\n- Appu：ボットのアイデア",
+        "communities": "コミュニティ",
+        "communitiesList": "Tronix Development Community\nすべての貢献者とサポーター",
+        "license": "ライセンス",
+        "licenseInfo": "このプロジェクトはGNU Affero General Public License v3.0の下でライセンスされています",
+        "footer": "インドネシアのTronix Developmentによって🐈で作られました",
+        "notYourButton": "このボタンはあなたのものではありません！",
+        "error": "ボット情報の取得中にエラーが発生しました。",
+        "aboutMe": "私について",
+        "botName": "Soundyについて",
+        "contributorsTitle": "Soundyの貢献者",
+        "links": "リンク",
+        "buttons": {
+          "about": "概要",
+          "contributors": "貢献者",
+          "inviteBot": "ボットを招待",
+          "supportServer": "サポートサーバー",
+          "voteForMe": "投票する",
+          "viewLicense": "ライセンスを表示"
+        }
+      },
+      "faq": {
+        "title": "よくある質問",
+        "description": "Soundyに関するよくある質問：",
+        "questions": {
+          "invite": {
+            "question": "1. Soundyをサーバーに招待するにはどうすればよいですか？",
+            "answer": "`{{prefix}}invite`コマンドを使用するか、[ここをクリック](https://discord.com/oauth2/authorize?client_id=1168385371294420992)して招待してください。",
+            "slashAnswer": "`/invite`コマンドを使用するか、[ここをクリック](https://discord.com/oauth2/authorize?client_id=1168385371294420992)して招待してください。"
+          },
+          "support": {
+            "question": "2. ボットをサポートするにはどうすればよいですか？",
+            "answer": "`{{prefix}}vote`コマンドを使用してTop.ggでSoundyに投票できます！",
+            "slashAnswer": "`/vote`コマンドを使用してTop.ggでSoundyに投票できます！"
+          },
+          "features": {
+            "question": "3. Soundyの主な機能は何ですか？",
+            "answer": "Soundyは高品質なオーディオ再生、フィルター、使いやすいインターフェースを備えたパワフルな音楽ボットです！"
+          },
+          "bugs": {
+            "question": "4. バグを報告するにはどうすればよいですか？",
+            "answer": "サポートサーバーに参加し、適切なチャンネルで問題を報告してください。"
+          },
+          "suggestions": {
+            "question": "5. 新機能を提案するにはどうすればよいですか？",
+            "answer": "サポートサーバーに参加して、新機能や改善点を提案してください。"
+          },
+          "commands": {
+            "question": "6. すべてのコマンドのリストはどこで確認できますか？",
+            "answer": "`{{prefix}}help`コマンドを使用して、利用可能なすべてのコマンドとカテゴリを確認できます。",
+            "slashAnswer": "`/help`コマンドを使用して、利用可能なすべてのコマンドとカテゴリを確認できます。"
+          },
+          "troubleshooting": {
+            "question": "7. 音楽の再生に問題がある場合、どうすればよいですか？",
+            "answer": "Soundyで音楽の再生に問題がある場合は、次の手順を試してください：\n1. ボイスチャンネルにいることを確認する\n2. Soundyに参加および発言の権限があることを確認する\n3. 音楽のURLまたは検索クエリが有効であることを確認する\n4. Soundyを切断して再接続する\n5. 問題が続く場合は、サポートサーバーに参加してヘルプを求める"
+          },
+          "filters": {
+            "question": "8. フィルターはどのように使用しますか？",
+            "answer": "Soundyは、ナイトコア、ベースブースト、8Dなどの様々なオーディオフィルターを提供しています。音楽の再生中に対応するコマンド（例：`{{prefix}}nightcore`、`{{prefix}}bassboost`）を使用してください。",
+            "slashAnswer": "Soundyは、ナイトコア、ベースブースト、8Dなどの様々なオーディオフィルターを提供しています。音楽の再生中に対応するコマンド（例：`/nightcore`、`/bassboost`）を使用してください。"
+          }
+        }
+      },
+      "help": {
+        "title": "Soundyヘルプメニュー",
+        "description": "利用可能なすべてのコマンドとカテゴリ：",
+        "noDescription": "説明がありません",
+        "mainMenu": {
+          "title": "Soundyヘルプメニュー",
+          "greeting": {
+            "1": "**こんにちは！**",
+            "2": "**私は**",
+            "3": "**あなたの音楽の仲間です！**"
+          },
+          "description": "**Soundyは、Discordで素晴らしい音楽体験を提供するために設計された音楽ボットです。包括的で使いやすい機能を備えており、Discordサーバーに最適な選択肢です。**",
+          "categories": {
+            "configurations": "設定",
+            "devs": "開発者",
+            "filters": "フィルター",
+            "informations": "情報",
+            "music": "音楽",
+            "playlists": "プレイリスト"
+          },
+          "selectPrompt": "**以下のメニューからカテゴリを選択してください。**",
+          "footer": "Soundyをお選びいただきありがとうございます！"
+        },
+        "categoryMenu": {
+          "title": "{{category}}コマンド",
+          "titleWithPages": "{{category}}コマンド（ページ{{current}}/{{total}}）",
+          "description": "このカテゴリで利用可能なコマンド：",
+          "notYourMenu": "このメニューはあなたのものではありません！",
+          "error": "申し訳ありません！ヘルプの提供中にエラーが発生しました。\n回路が少し過負荷になっているかもしれません。\n後でもう一度お試しください。問題が続く場合は、\n開発者にお知らせください。ごめんなさい！"
+        }
+      },
+      "info": {
+        "mainMenu": {
+          "title": "Soundy情報メニュー",
+          "description": {
+            "1": "**こんにちは！**",
+            "2": "**情報メニューへようこそ！**",
+            "3": "**ここでSoundyの様々な側面に関する詳細情報を確認できます：**",
+            "4": "**クライアント情報**",
+            "5": "**統計**",
+            "6": "**システム情報**",
+            "7": "**すべての情報**",
+            "8": "**以下のメニューからカテゴリを選択してください。**",
+            "9": "招待する",
+            "10": "サポートサーバー"
+          }
+        },
+        "categories": {
+          "client": {
+            "title": "クライアント情報",
+            "fields": {
+              "username": "ユーザー名",
+              "apiLatency": "APIレイテンシー",
+              "responseTime": "応答時間",
+              "uptime": "稼働時間",
+              "discordjs": "Discord.js"
+            }
+          },
+          "stats": {
+            "title": "統計",
+            "fields": {
+              "serverCount": "サーバー数",
+              "userCount": "ユーザー数",
+              "channelCount": "チャンネル数",
+              "activePlayers": "アクティブなプレイヤー",
+              "connectedNodes": "接続されたノード"
+            }
+          },
+          "system": {
+            "title": "システム情報",
+            "fields": {
+              "os": "OS",
+              "cpu": "CPU",
+              "vcore": "vCore",
+              "ram": "RAM",
+              "memoryUsage": "メモリ使用量",
+              "bun": "Bun"
+            }
+          },
+          "all": "すべての情報"
+        },
+        "selectMenu": {
+          "placeholder": "情報カテゴリを選択",
+          "options": {
+            "mainMenu": {
+              "label": "メインメニュー",
+              "description": "メインメニューに戻る"
+            },
+            "clientInfo": {
+              "label": "クライアント情報",
+              "description": "ボットクライアント情報を表示"
+            },
+            "statsInfo": {
+              "label": "統計",
+              "description": "ボット統計を表示"
+            },
+            "systemInfo": {
+              "label": "システム情報",
+              "description": "システム情報を表示"
+            },
+            "allInfo": {
+              "label": "すべての情報",
+              "description": "すべてのボット情報を表示"
+            }
+          }
+        },
+        "errors": {
+          "notYourMenu": "このメニューはあなたのものではありません！",
+          "generic": "ボット情報の取得中にエラーが発生しました。"
+        }
+      },
+      "node": {
+        "title": "Soundyノードステータス",
+        "description": "詳細情報を表示するノードを以下のメニューから選択してください",
+        "footer": "ノードステータス情報",
+        "selectMenu": {
+          "placeholder": "表示するノードを選択",
+          "status": {
+            "connected": "接続済み",
+            "disconnected": "切断"
+          }
+        },
+        "nodeInfo": {
+          "players": "プレイヤー",
+          "playingPlayers": "再生中のプレイヤー",
+          "uptime": "稼働時間",
+          "cpu": {
+            "title": "CPU",
+            "cores": "コア",
+            "systemLoad": "システム負荷",
+            "lavalinkLoad": "Lavalink負荷"
+          },
+          "memory": {
+            "title": "メモリ",
+            "used": "使用中",
+            "reservable": "予約可能"
+          }
+        },
+        "errors": {
+          "notYourMenu": "このメニューはあなたのものではありません！",
+          "nodeNotFound": "ノードが見つかりません！"
+        }
+      },
+      "ping": {
+        "title": "ボットレイテンシー",
+        "pinging": "計測中...",
+        "footer": "Soundyレイテンシー情報",
+        "latency": "レイテンシー",
+        "apiLatency": "APIレイテンシー"
+      },
+      "vote": {
+        "title": "Soundyに投票！",
+        "description": {
+          "header": "Top.ggでボットに投票してサポートしてください！",
+          "note": "注：12時間ごとに1回投票できます！",
+          "voteLink": "投票リンク：[ここをクリックして投票]",
+          "message": "私たちを選んでいただきありがとうございます！素晴らしい音楽と良い雰囲気で一日が満たされますように。音楽を続けましょう！"
+        },
+        "footer": "ご支援ありがとうございます！",
+        "buttons": {
+          "vote": "投票",
+          "invite": "招待"
+        }
+      }
+    },
+    "music": {
+        "noPlayer": {
+            "title": "アクティブなプレイヤーがありません",
+            "description": "おっと！今はここで音楽パーティーが行われていません。\nまずは曲を再生してみましょう！"
+        },
+        "notInVoice": {
+            "title": "ボイスチャンネルにいません",
+            "description": "こんにちは、音楽探検家さん！\nデジタル空間を浮遊しているようですね - まずはボイスチャンネルに参加して、一緒に素晴らしい曲を探しましょう！"
+        },
+        "notInSameVoice": {
+            "title": "同じボイスチャンネルにいません",
+            "description": "おっと！一緒にジャムセッションするには同じボイスチャンネルにいる必要があります！私のいるチャンネルに参加してください！"
+        },
+        "noTracks": {
+            "title": "キューに曲がありません",
+            "description": "ステージは空っぽで、あなたの音楽選択を待っています！\n完璧なプレイリストを作るために曲を追加してください。"
+        },
+        "notForYou": "このメニューはあなたのものではありません！",
+        "autoplay": {
+          "enabled": "自動再生モードが**有効**になりました！",
+          "disabled": "自動再生モードが**無効**になりました！",
+          "error": "申し訳ありません！自動再生の切り替え中に問題が発生しました。もう一度お試しください！"
+        },
+        "clearqueue": {
+          "title": "キューをクリア",
+          "description": "キューからすべての曲をクリアしました！\n新しい曲を追加する準備ができました！",
+          "alreadyEmpty": {
+            "title": "キューは既に空です",
+            "description": "キューは既に空です！クリアするものがありません。"
+          }
+        },
+        "forward": {
+            "title": "トラックを早送り",
+            "description": "トラックを10秒早送りしました！",
+            "error": {
+                "title": "トラック長を超えて早送りできません",
+                "description": "おっと！トラック長を超えて早送りすることはできません！グルーヴを保ちましょう！"
+            }
+        },
+        "grab": {
+            "title": "トラックを保存",
+            "description": "DMで音楽のサプライズが待っています！確認してください！",
+            "np": "再生中",
+            "songInfo": {
+                "title": "タイトル",
+                "url": "URL",
+                "duration": "再生時間",
+                "requestedBy": "リクエスト者"
+            },
+            "error": {
+                "title": "DMを送信できません",
+                "description": "おっと！あなたのDM要塞は侵入不可能なようです。メロディックメッセージを受け取るにはプライバシー設定を調整してください！"
+            },
+            "sentToDM": {
+                "title": "トラックを保存しました！",
+                "description": "トラックの詳細をDMに送信しました！"
+            },
+            "footer": "音楽をお楽しみください！🎧"
+        },
+        "join": {
+            "success": {
+                "title": "参加しました",
+                "description": "やったー！{channel}のパーティーに参加しました！音量を上げて音楽の魔法を起こしましょう！"
+            },
+            "failed": {
+                "title": "参加に失敗",
+                "description": "おっと！参加しようとして音が外れてしまいました！技術的な問題：{error}"
+            }
+        },
+        "leave": {
+            "title": "ボイスチャンネルを退出",
+            "description": "パーティーは終了しました！キューをクリアしてチャンネルを退出しました。\n次の音楽の冒険の準備ができたらお呼びください！",
+            "error": {
+                "title": "エラー",
+                "description": "おっと！音楽が自身のリズムに絡まってしまったようです。\nビートが戻ってきたら、もう一度試してください！"
+            }
+        },
+        "loop": {
+            "title": "ループモード",
+            "description": "以下のメニューからループモードを選択してください！",
+            "modes": {
+                "disabled": "ループモード：**無効**",
+                "track": "ループモード：**トラック**",
+                "queue": "ループモード：**キュー**"
+            },
+            "menu": {
+                "placeholder": "ループモードを選択",
+                "options": {
+                    "disable": {
+                        "label": "無効",
+                        "description": "すべてのループモードを無効にする"
+                    },
+                    "track": {
+                        "label": "トラック",
+                        "description": "現在のトラックをループする"
+                    },
+                    "queue": {
+                        "label": "キュー",
+                        "description": "キュー全体をループする"
+                    }
+                }
+            },
+            "timeout": {
+                "title": "ループ選択がタイムアウト",
+                "description": "おっと！時間内に選択が行われませんでした！"
+            }
+        },
+        "lyrics": {
+            "title": "{{song}}の歌詞",
+            "searching": "歌詞を検索中...",
+            "noQuery": {
+                "description": "曲名を指定するか、曲を再生してください！"
+            },
+            "invalidUrl": {
+                "description": "音楽URLを解決できませんでした。"
+            },
+            "notFound": {
+                "description": "この曲の歌詞が見つかりませんでした。"
+            },
+            "error": {
+                "description": "歌詞の取得に失敗しました。後でもう一度お試しください。"
+            }
+        },
+        "nowplaying": {
+            "title": "再生中",
+            "artist": "アーティスト",
+            "duration": "再生時間",
+            "requestedBy": "リクエスト者"
+        },
+        "pause": {
+            "alreadyPaused": {
+                "title": "既に一時停止中",
+                "description": "メロディは既に夢のような一時停止状態です！\n音楽が平和な休息を取っているようです。"
+            },
+            "paused": {
+                "title": "一時停止",
+                "description": "リズムが優しく中断されました！\nあなたの音楽の旅は魔法のような休憩中です。"
+            }
+        },
+        "play": {
+            "noQuery": {
+                "title": "クエリがありません",
+                "description": "こんにちは！再生する曲名またはURLを指定してください。"
+            },
+            "missingPermissions": {
+                "title": "権限がありません",
+                "description": "ボイスチャンネルへの参加と発言の権限がありません！"
+            },
+            "connectionError": {
+                "title": "接続エラー",
+                "description": "ボイスチャンネルへの接続に失敗しました。もう一度お試しください。"
+            },
+            "noResults": {
+                "title": "結果が見つかりません",
+                "description": "申し訳ありません！「{query}」に関する結果が見つかりませんでした。別のキーワードをお試しください。"
+            },
+            "addedPlaylist": {
+                "title": "プレイリストをキューに追加しました",
+                "tracks": "トラック",
+                "requestedBy": "リクエスト者"
+            },
+            "addedTrack": {
+                "title": "キューに追加しました",
+                "artist": "アーティスト",
+                "duration": "再生時間",
+                "requestedBy": "リクエスト者"
+            },
+            "error": {
+                "title": "エラーが発生しました",
+                "description": "申し訳ありません！音楽の再生中に問題が発生しました。もう一度お試しください！"
+            }
+        },
+        "previous": {
+            "noPrevious": {
+                "title": "前の曲がありません",
+                "description": "申し訳ありません！前の曲がありません！\n現在の曲で楽しみましょう！"
+            },
+            "playing": {
+                "title": "前の曲を再生中",
+                "description": "音楽の旅を最初に戻します！\nもう一度この素晴らしい曲でグルーヴしましょう！"
+            }
+        },
+        "queue": {
+            "title": "キュー",
+            "nowPlaying": "再生中",
+            "upNext": "次の曲",
+            "noTracks": "キューに曲がありません",
+            "footer": "最初の10曲を表示中 • 合計トラック数：{{total}}"
+        },
+        "replay": {
+            "noTrack": {
+                "title": "再生中の曲がありません",
+                "description": "リプレイする曲が再生されていません！\n最初に何か再生してみてください！"
+            },
+            "success": {
+                "title": "曲をリプレイ中",
+                "description": "音楽の旅を最初に戻します！\nもう一度この素晴らしい曲でグルーヴしましょう！"
+            }
+        },
+        "resume": {
+            "alreadyPlaying": {
+                "title": "すでに再生中",
+                "description": "音楽はすでに再生中です！\nパーティーを続けましょう！"
+            },
+            "success": {
+                "title": "再開しました",
+                "description": "音楽を再開しました！\nパーティーを続けましょう！"
+            }
+        },
+        "rewind": {
+            "title": "巻き戻し",
+            "description": "10秒巻き戻しました！"
+        },
+        "search": {
+            "title": "「{{query}}」の検索結果",
+            "selectTrack": "トラックを選択",
+            "noQuery": {
+                "title": "クエリがありません",
+                "description": "検索クエリを入力してください！"
+            },
+            "invalidUrl": {
+                "title": "無効な検索",
+                "description": "直接リンクの場合は{{prefix}}playコマンドを使用してください。このコマンドは曲名での検索用です。",
+                "slashDescription": "直接リンクの場合は/playコマンドを使用してください。このコマンドは曲名での検索用です。"
+            },
+            "missingPermissions": {
+                "title": "権限がありません",
+                "description": "ボイスチャンネルへの参加と発言の権限が必要です！"
+            },
+            "noResults": {
+                "title": "結果が見つかりません",
+                "description": "申し訳ありません！その検索では曲が見つかりませんでした。\n別のキーワードやフレーズを試してみましょう！"
+            },
+            "notInSameVoice": {
+                "title": "同じボイスチャンネルにいません",
+                "description": "申し訳ありません！一緒にジャムセッションするには同じボイスチャンネルにいる必要があります！私のいるチャンネルに参加してください！"
+            },
+            "connectionError": {
+                "title": "接続エラー",
+                "description": "ボイスチャンネルへの接続に失敗しました。もう一度お試しください。"
+            },
+            "error": {
+                "title": "エラー",
+                "description": "トラックの検索中にエラーが発生しました。"
+            },
+            "addedToQueue": {
+                "title": "キューに追加しました"
+            },
+            "track": {
+                "title": "トラック",
+                "artist": "アーティスト",
+                "duration": "再生時間",
+                "requestedBy": "リクエスト者"
+            }
+        },
+        "seek": {
+            "title": "シーク完了",
+            "description": "**{{position}}**にシークしました！\n現在の曲でパーティーを続けましょう！",
+            "missingPosition": {
+                "title": "位置が指定されていません",
+                "description": "シークする位置を指定してください（例：1:30または90）"
+            },
+            "invalidFormat": {
+                "title": "無効な形式",
+                "description": "分:秒（例：1:30）または秒（例：90）の形式を使用してください"
+            },
+            "cannotSeek": {
+                "title": "シークできません",
+                "description": "トラックの長さを特定できません！"
+            },
+            "invalidPosition": {
+                "title": "無効な位置",
+                "description": "位置は0から{{duration}}の間である必要があります！"
+            }
+        },
+        "shuffle": {
+            "title": "シャッフルしました",
+            "description": "キューが新しくミックスされました！曲が新しいリズムで踊っています！",
+            "notEnoughSongs": {
+                "title": "キューの曲が不足しています",
+                "description": "申し訳ありません！シャッフルするには少なくとも2曲必要です！もっと曲を追加しましょう！"
+            }
+        },
+        "skip": {
+            "title": "スキップしました",
+            "description": "ウォーッシュ！{{nextTrack}}に移動します！\n新しい音楽の魔法の準備はできていますか？",
+            "nextTrack": "次の曲",
+            "recommendedTrack": "おすすめの曲",
+            "queueEmpty": {
+                "title": "キューが空です",
+                "description": "これで終わりです！今回の音楽の旅は終わりました。\n新しい曲で新たなスタートを切りましょう！"
+            }
+        },
+        "stop": {
+            "title": "音楽を停止しました",
+            "description": "パーティーは終了しました！キューをクリアしてスピーカーを片付けました。\n次の音楽の冒険の準備ができたらお声がけください！",
+            "error": {
+                "title": "エラー",
+                "description": "おっと！音楽が自身のリズムに少し絡まってしまったようです。\nビートが戻ってきたら、もう一度試してみてください！"
+            }
+        },
+        "volume": {
+            "title": "音量を設定しました",
+            "description": "バイブスを上げています！音量は現在**{{volume}}%**でグルーヴしています",
+            "invalidVolume": {
+                "title": "無効な音量",
+                "description": "0から100の間で有効な音量レベルを指定してください！"
+            }
+        }
+    },
+    "playlist": {
+        "create": {
+            "title": "プレイリストを作成しました",
+            "description": "プレイリストを作成しました：**{{name}}**",
+            "error": {
+                "title": "エラー",
+                "description": "プレイリスト名を指定してください！",
+                "exists": "その名前のプレイリストは既に存在します！"
+            }
+        },
+        "list": {
+            "title": "あなたのプレイリスト",
+            "empty": {
+                "title": "プレイリストがありません",
+                "description": "プレイリストがありません！"
+            }
+        },
+        "view": {
+            "error": {
+                "title": "エラー",
+                "description": "プレイリスト名を指定してください！",
+                "notFound": "プレイリストが見つかりません！",
+                "empty": "このプレイリストにトラックがありません"
+            }
+        },
+        "add": {
+            "title": "トラックを追加しました",
+            "description": "{{message}}をプレイリストに追加：**{{playlistName}}**",
+            "error": {
+                "title": "エラー",
+                "description": "プレイリスト名とクエリを指定してください！",
+                "notFound": "プレイリストが見つかりません！",
+                "noTracks": "トラックが見つかりません！",
+                "failed": "プレイリストへのトラック追加中にエラーが発生しました！"
+            },
+            "searching": "🔍 検索中..."
+        },
+        "remove": {
+            "title": "トラックを削除しました",
+            "description": "プレイリストからトラックを削除しました：**{{name}}**",
+            "error": {
+                "title": "エラー",
+                "description": "プレイリスト名とトラック番号を指定してください！",
+                "notFound": "プレイリストが見つかりません！",
+                "invalidTrack": "無効なトラック番号です！"
+            }
+        },
+        "delete": {
+            "title": "プレイリストを削除しました",
+            "description": "プレイリストを削除しました：**{{name}}**",
+            "error": {
+                "title": "エラー",
+                "description": "プレイリスト名を指定してください！",
+                "notFound": "プレイリストが見つかりません！"
+            }
+        },
+        "load": {
+            "title": "プレイリストを読み込みました",
+            "description": "プレイリストから**{{trackCount}}**曲を読み込みました：**{{name}}**",
+            "error": {
+                "title": "エラー",
+                "description": "プレイリスト名を指定してください！",
+                "notFound": "プレイリストが見つからないか空です！",
+                "noVoice": "ボイスチャンネルに参加する必要があります！"
+            },
+            "loading": "🔍 プレイリストを読み込み中..."
+        },
+        "error": {
+            "title": "エラー",
+            "description": "プレイリストの管理中にエラーが発生しました！",
+            "invalidSubcommand": "無効なサブコマンドです！`create`、`list`、`view`、`add`、`remove`、`delete`、または`load`を使用してください"
+        },
+        "embed": {
+            "name": "{{name}}のプレイリスト",
+            "description": "{{description}}",
+            "footer": "ページ{{page}}/{{pages}} • 合計プレイリスト数：{{total}}",
+            "tracks": "合計トラック数：{{total}}",
+            "track": "アーティスト：{{author}} • 再生時間：{{duration}}"
+        },
+        "buttons": {
+            "prev": "前へ",
+            "next": "次へ",
+            "invalid": "これらのボタンは使用できません！"
+        }
+    }
+  }
+}

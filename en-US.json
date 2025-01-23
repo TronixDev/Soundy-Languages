@@ -1,0 +1,745 @@
+{
+  "errors": {
+    "noPermission": "You don't have permission to use this command!\nRequired permission: {{permission}}",
+    "noMusic": "There is no music playing!",
+    "invalidValue": "Please provide a valid {{type}} value between {{min}} and {{max}}!",
+    "setupExists": "Control panel already exists in this server! Use `setup delete` to remove it first.",
+    "noSetup": "There is no Soundy control panel setup in this server.",
+    "setupError": "An error occurred while {{action}} setup.",
+    "filterError": "An error occurred while applying filter.",
+    "premiumRequired": "You've used all your free commands for today!\n\nVote for Soundy to get unlimited premium access for 14 hours:"
+  },
+  "success": {
+    "filterApplied": "Applied {{filter}} filter!",
+    "languageSet": "Server language has been set to: {{language}}"
+  },
+  "music": {
+    "nowplaying": "Now Playing",
+    "artist": "Artist",
+    "duration": "Duration",
+    "requestedBy": "Requested by",
+    "node": "Node",
+    "finishTime": "Finish Time",
+    "status": "**{{title}}** by **{{artist}}**",
+    "moved": "Bot has been moved to voice channel",
+    "setup": {
+      "title": "Soundy Music Player",
+      "descriptions": "Join a voice channel and queue songs by name or url in this channel.",
+      "node": "Node",
+      "finishTime": "Finish Time"
+    }
+  },
+  "commands": {
+    "requestedBy": "Requested by {{user}}",
+    "configurations": {
+      "247": {
+        "enabled": "24/7 mode has been **enabled**!\n\nI will now stay in voice channels indefinitely.",
+        "disabled": "24/7 mode has been **disabled**!\n\nI will now leave voice channels when inactive.",
+        "error": "An error occurred while toggling 24/7 mode."
+      },
+      "language": {
+        "current": "Current language: `{{current}}`\nAvailable languages: {{available}}",
+        "invalid": "Invalid language code!\nAvailable languages: {{available}}",
+        "success": "Server language has been set to: `{{language}}`",
+        "error": "Failed to update language. Please try again."
+      },
+      "prefix": {
+        "current": "Current prefix: `{{current}}`\nAvailable prefix: {{available}}",
+        "invalid": "Invalid prefix!\nAvailable prefix: {{available}}",
+        "success": "Server prefix has been changed to: `{{prefix}}`",
+        "error": "An error occurred while updating the prefix. Please try again later.",
+        "reset": "Server prefix has been reset to default: `{{prefix}}`",
+        "length": "Prefix cannot be longer than 5 characters!"
+      },
+      "setup": {
+        "error": "An error occurred while creating/deleting the setup channel.",
+        "noPermission": "You do not have permission to use this command!\nRequired permission: `MANAGE_CHANNELS`",
+        "botNoPermission": "Bot does not have the required permissions!\nRequired permission: `MANAGE_CHANNELS`",
+        "help": "Available commands:\n`setup create` - Create control panel\n`setup delete` - Delete control panel",
+        "exists": "A control panel already exists in this server! Use `setup delete` to remove it first.",
+        "noSetup": "There is no Soundy control panel setup in this server.",
+        "created": "Successfully created the Soundy control panel in",
+        "deleted": "Successfully deleted the Soundy control panel!",
+        "deleteError": "An error occurred while deleting the setup."
+      },
+      "voicestatus": {
+        "noPermission": "You do not have permission to use this command!\nRequired permission: `MANAGE_GUILD`",
+        "enabled": "Voice status has been **enabled**!\n\nThe bot will now show the currently playing song in voice channel status.",
+        "disabled": "Voice status has been **disabled**!\n\nThe bot will no longer show the currently playing song in voice channel status.",
+        "error": "An error occurred while toggling voice status."
+      }
+    },
+    "filters": {
+      "noMusic": "There is no music playing!",
+      "success": "Applied {{filter}} audio filter!",
+      "error": "An error occurred while applying filter.",
+      "clear": {
+        "success": "Cleared all active filters!",
+        "error": "An error occurred while clearing filters."
+      },
+      "reset": {
+        "success": "Reset all filters to default values!",
+        "error": "An error occurred while resetting filters."
+      },
+      "equalizer": {
+        "noBand": "Please provide both band (0-13) and gain (-0.25 to 1.0) values!",
+        "invalidBand": "Band must be between 0 and 13!",
+        "invalidGain": "Gain must be between -0.25 and 1.0!",
+        "success": "Set Band **{{band}}** to gain: **{{gain}}**"
+      },
+      "pitch": {
+        "noPitch": "Please provide a valid pitch value between 0.5 and 2.0!",
+        "success": "Pitch set to: **{{pitch}}x**",
+        "error": "An error occurred while setting the pitch."
+      },
+      "rate": {
+        "noRate": "Please provide a valid rate value between 0.5 and 2.0!",
+        "success": "Rate set to: **{{rate}}x**",
+        "error": "An error occurred while setting the rate."
+      },
+      "speed": {
+        "noSpeed": "Please provide a valid speed value between 0.5 and 2.0!",
+        "success": "Speed set to: **{{speed}}x**",
+        "error": "An error occurred while setting the speed."
+      }
+    },
+    "informations": {
+      "about": {
+        "description": "I'm a feature-rich music bot designed to deliver high-quality music playback experience on Discord.",
+        "features": "Key Features",
+        "featuresList": [
+          "High quality music playback",
+          "Support for multiple music sources", 
+          "Advanced queue management",
+          "DJ role system",
+          "Custom playlists",
+          "And much more!"
+        ],
+        "credits": "Credits",
+        "creditsInfo": "- Contributed by: iaMJ\n- Developed by: Tronix Development\n- Country: Indonesia",
+        "specialThanks": "Special Thanks",
+        "specialThanksList": "- iaMJ: Creator of Soundy\n- kydo: For autocomplete feature, Bug Fixer, and more contributions\n- L RMN: For the filters configurations\n- Appu: For the idea of the bot",
+        "communities": "Communities",
+        "communitiesList": "Tronix Development Community\nAll contributors and supporters",
+        "license": "License",
+        "licenseInfo": "This project is licensed under the GNU Affero General Public License v3.0",
+        "footer": "Made with 🐈 by Tronix Development in Indonesia",
+        "notYourButton": "This button is not for you!",
+        "error": "An error occurred while fetching bot information.",
+        "aboutMe": "About Me",
+        "botName": "About Soundy",
+        "contributorsTitle": "Soundy Contributors",
+        "links": "Links",
+        "buttons": {
+          "about": "About",
+          "contributors": "Contributors",
+          "inviteBot": "Invite Bot",
+          "supportServer": "Support Server",
+          "voteForMe": "Vote for me",
+          "viewLicense": "View License"
+        }
+      },
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "description": "Here are some common questions about Soundy:",
+        "questions": {
+          "invite": {
+            "question": "1. How do I invite Soundy to my server?",
+            "answer": "Use the `{{prefix}}invite` command or click [here](https://discord.com/oauth2/authorize?client_id=1168385371294420992) to invite me.",
+            "slashAnswer": "Use the `/invite` command or click [here](https://discord.com/oauth2/authorize?client_id=1168385371294420992) to invite me."
+          },
+          "support": {
+            "question": "2. How can I support the bot?", 
+            "answer": "You can vote for Soundy on Top.gg using the `{{prefix}}vote` command!",
+            "slashAnswer": "You can vote for Soundy on Top.gg using the `/vote` command!"
+          },
+          "features": {
+            "question": "3. What are Soundy's main features?",
+            "answer": "Soundy is a powerful music bot with high-quality audio playback, filters, and an easy-to-use interface!"
+          },
+          "bugs": {
+            "question": "4. How do I report a bug?",
+            "answer": "Join our support server and report any issues in the appropriate channel."
+          },
+          "suggestions": {
+            "question": "5. How can I suggest new features?",
+            "answer": "Join our support server to suggest new features and improvements."
+          },
+          "commands": {
+            "question": "6. Where can I find the full list of commands?",
+            "answer": "Use the `{{prefix}}help` command to see all available commands and categories.",
+            "slashAnswer": "Use the `/help` command to see all available commands and categories."
+          },
+          "troubleshooting": {
+            "question": "7. How do I fix issues with playing music?",
+            "answer": "If you're having trouble playing music with Soundy, try these steps:\n1. Make sure you're in a voice channel\n2. Check if Soundy has permissions to join and speak\n3. Ensure the music URL or search query is valid\n4. Try disconnecting and reconnecting Soundy\n5. If issues continue, join our support server for help"
+          },
+          "filters": {
+            "question": "8. How do I use filters?",
+            "answer": "Soundy offers various audio filters like nightcore, bassboost, 8D, etc. Use the corresponding commands (e.g., `{{prefix}}nightcore`, `{{prefix}}bassboost`) while music is playing.",
+            "slashAnswer": "Soundy offers various audio filters like nightcore, bassboost, 8D, etc. Use the corresponding commands (e.g., `/nightcore`, `/bassboost`) while music is playing."
+          }
+        }
+      },
+      "help": {
+        "title": "Soundy Help Menu",
+        "description": "Here are all available commands and categories:",
+        "noDescription": "No description available",
+        "mainMenu": {
+          "title": "Soundy Help Menu",
+          "greeting": {
+            "1": "**Haii!**",
+            "2": "**I'm**",
+            "3": "**your musical companion!**"
+          },
+          "description": "**Soundy is a music bot designed to provide an amazing music listening experience on Discord. With its comprehensive and easy-to-use features, Soundy is the perfect choice for your Discord server.**",
+          "categories": {
+            "configurations": "Configurations",
+            "devs": "Devs", 
+            "filters": "Filters",
+            "informations": "Informations",
+            "music": "Music",
+            "playlists": "Playlists"
+          },
+          "selectPrompt": "**Select A Category From The Menu Below.**",
+          "footer": "Thanks for choosing Soundy!"
+        },
+        "categoryMenu": {
+          "title": "{{category}} Commands",
+          "titleWithPages": "{{category}} Commands (Page {{current}}/{{total}})",
+          "description": "List of available commands in this category:",
+          "notYourMenu": "This menu is not for you!",
+          "error": "Oops! It seems like I encountered an error while trying to help you. \nMy circuits might be a bit overloaded right now. \nCould you please try again later? If the problem persists, \nplease let my creators know. Gomen nasai!"
+        }
+      },
+      "info": {
+        "mainMenu": {
+          "title": "Soundy Info Menu",
+          "description": {
+            "1": "**Hello!**",
+            "2": "**Welcome to the Info Menu!**",
+            "3": "**Here you can find detailed information about Soundy's various aspects:**",
+            "4": "**Client Information**",
+            "5": "**Statistics**",
+            "6": "**System Information**",
+            "7": "**All Information**",
+            "8": "**Select A Category From The Menu Below.**",
+            "9": "Invite Me",
+            "10": "Support Server"
+          }
+        },
+        "categories": {
+          "client": {
+            "title": "Client Information",
+            "fields": {
+              "username": "Username",
+              "apiLatency": "API Latency", 
+              "responseTime": "Response Time",
+              "uptime": "Uptime",
+              "discordjs": "Discord.js"
+            }
+          },
+          "stats": {
+            "title": "Statistics",
+            "fields": {
+              "serverCount": "Server Count",
+              "userCount": "User Count", 
+              "channelCount": "Channel Count",
+              "activePlayers": "Active Players",
+              "connectedNodes": "Connected Nodes"
+            }
+          },
+          "system": {
+            "title": "System Information",
+            "fields": {
+              "os": "OS",
+              "cpu": "CPU",
+              "vcore": "vCore",
+              "ram": "RAM",
+              "memoryUsage": "Memory Usage",
+              "bun": "Bun"
+            }
+          },
+          "all": "All Information"
+        },
+        "selectMenu": {
+          "placeholder": "Select an information category",
+          "options": {
+            "mainMenu": {
+              "label": "Main Menu",
+              "description": "Return to the main menu"
+            },
+            "clientInfo": {
+              "label": "Client Information", 
+              "description": "View bot client information"
+            },
+            "statsInfo": {
+              "label": "Statistics",
+              "description": "View bot statistics"  
+            },
+            "systemInfo": {
+              "label": "System Information",
+              "description": "View system information"
+            },
+            "allInfo": {
+              "label": "All Information",
+              "description": "View all bot information"
+            }
+          }
+        },
+        "errors": {
+          "notYourMenu": "This menu is not for you!",
+          "generic": "An error occurred while fetching bot information."
+        }
+      },
+      "node": {
+        "title": "Soundy Node Status",
+        "description": "Select a node from the menu below to see detailed information",
+        "footer": "Node Status Information",
+        "selectMenu": {
+          "placeholder": "Select a node to view",
+          "status": {
+            "connected": "Connected",
+            "disconnected": "Disconnected"
+          }
+        },
+        "nodeInfo": {
+          "players": "Players",
+          "playingPlayers": "Playing Players", 
+          "uptime": "Uptime",
+          "cpu": {
+            "title": "CPU",
+            "cores": "Cores",
+            "systemLoad": "System Load",
+            "lavalinkLoad": "Lavalink Load"
+          },
+          "memory": {
+            "title": "Memory",
+            "used": "Used",
+            "reservable": "Reservable"
+          }
+        },
+        "errors": {
+          "notYourMenu": "This menu is not for you!",
+          "nodeNotFound": "Node not found!"
+        }
+      },
+      "ping": {
+        "title": "Bot Latency",
+        "pinging": "Pinging...",
+        "footer": "Soundy Latency Information",
+        "latency": "Latency",
+        "apiLatency": "API Latency"
+      },
+      "vote": {
+        "title": "Vote for Soundy!",
+        "description": {
+          "header": "Support the bot by voting for it on Top.gg!",
+          "note": "Note: You can vote once every 12 hours!",
+          "voteLink": "Vote Link: [Click here to vote]",
+          "message": "You're awesome for choosing us! May your day be filled with fantastic tunes and good vibes. Let's keep the music playing!"
+        },
+        "footer": "Thank you for your support!",
+        "buttons": {
+          "vote": "Vote",
+          "invite": "Invite"
+        }
+      }
+    },
+    "music": {
+        "noPlayer": {
+            "title": "No Active Player",
+            "description": "Oops! There's no music party happening here right now.\nTry playing some tunes first!"
+        },
+        "notInVoice": {
+            "title": "Not in a Voice Channel",
+            "description": "Hey there, music explorer!\nLooks like you're floating in digital space - join a voice channel first and let's discover some awesome tunes together!"
+        },
+        "notInSameVoice": {
+            "title": "Not in the Same Voice Channel",
+            "description": "Oops! We need to be in the same voice channel to jam together! Come join me where I am!"
+        },
+        "noTracks": {
+            "title": "No Tracks in Queue",
+            "description": "The stage is empty and waiting for your musical selections!\nAdd some tracks to create your perfect playlist."
+        },
+        "notForYou": "This menu is not for you!",
+        "autoplay": {
+          "enabled": "Autoplay mode is now **enabled**!",
+          "disabled": "Autoplay mode is now **disabled**!",
+          "error": "Oops! Something went wrong while toggling autoplay. Please try again!"
+        },
+        "clearqueue": {
+          "title": "Queue Cleared",
+          "description": "All tracks have been cleared from the queue!\nReady for some fresh tunes?",
+          "alreadyEmpty": {
+            "title": "Queue Already Empty",
+            "description": "The queue is already empty! Nothing to clear here."
+          }
+        },
+        "forward": {
+            "title": "Track Forwarded",
+            "description": "Track forwarded by 10 seconds!",
+            "error": {
+                "title": "Cannot Forward Beyond Track Duration",
+                "description": "Oops! We can't forward beyond the track duration! Let's keep it in the groove!"
+            }
+        },
+        "grab": {
+            "title": "Track Saved",
+            "description": "A musical surprise awaits you in your DMs! Check it out!",
+            "np": "Now Playing",
+            "songInfo": {
+                "title": "Title",
+                "url": "URL", 
+                "duration": "Duration",
+                "requestedBy": "Requested by"
+            },
+            "error": {
+                "title": "Cannot Send DM",
+                "description": "Oops! It seems your DM fortress is impenetrable. Adjust your privacy settings to receive the melodic message!"
+            },
+            "sentToDM": {
+                "title": "Track Saved!",
+                "description": "I've sent the track details to your DMs!"
+            },
+            "footer": "Enjoy the music! 🎧"
+        },
+        "join": {
+            "success": {
+                "title": "Successfully Joined",
+                "description": "Woohoo! I've crashed the party in {channel}! Time to turn up the volume and make some musical magic happen!"
+            },
+            "failed": {
+                "title": "Failed to Join", 
+                "description": "Oops! Looks like I hit a sour note trying to join! Technical difficulties: {error}"
+            }
+        },
+        "leave": {
+            "title": "Left Voice Channel",
+            "description": "The party's wrapped up! I've cleared the queue and left the channel.\nReady when you are for another musical adventure!",
+            "error": {
+                "title": "Error",
+                "description": "Whoopsie daisy! Looks like the music got a bit tangled up in its own rhythm.\nGive it another shot in a moment, when the beat's back in sync!"
+            }
+        },
+        "loop": {
+            "title": "Loop Mode",
+            "description": "Select a loop mode from the menu below!",
+            "modes": {
+                "disabled": "Loop mode: **Disabled**",
+                "track": "Loop mode: **Track**",
+                "queue": "Loop mode: **Queue**"
+            },
+            "menu": {
+                "placeholder": "Select a loop mode",
+                "options": {
+                    "disable": {
+                        "label": "Disable",
+                        "description": "Disable all loop modes"
+                    },
+                    "track": {
+                        "label": "Track", 
+                        "description": "Loop the current track"
+                    },
+                    "queue": {
+                        "label": "Queue",
+                        "description": "Loop the entire queue"
+                    }
+                }
+            },
+            "timeout": {
+                "title": "Loop Selection Timed Out",
+                "description": "Oops! Looks like you didn't make a selection in time!"
+            }
+        },
+        "lyrics": {
+            "title": "Lyrics for {{song}}",
+            "searching": "Searching for lyrics...",
+            "noQuery": {
+                "description": "Please provide a song name or play a song first!"
+            },
+            "invalidUrl": {
+                "description": "Could not resolve the music URL."
+            },
+            "notFound": {
+                "description": "No lyrics found for this song."
+            },
+            "error": {
+                "description": "Failed to fetch lyrics. Please try again later."
+            }
+        },
+        "nowplaying": {
+            "title": "Now Playing",
+            "artist": "Artist",
+            "duration": "Duration",
+            "requestedBy": "Requested by"
+        },
+        "pause": {
+            "alreadyPaused": {
+                "title": "Already Paused",
+                "description": "The melody is already in a dreamy pause!\nIt's like the music is taking a peaceful nap."
+            },
+            "paused": {
+                "title": "Paused",
+                "description": "The rhythm has been gently suspended!\nYour musical journey is on a magical intermission."
+            }
+        },
+        "play": {
+            "noQuery": {
+                "title": "Missing Query",
+                "description": "Hey there! Please provide a song name or URL for me to play."
+            },
+            "missingPermissions": {
+                "title": "Missing Permissions",
+                "description": "I don't have permission to join and speak in your voice channel!"
+            },
+            "connectionError": {
+                "title": "Connection Error",
+                "description": "Failed to connect to voice channel. Please try again."
+            },
+            "noResults": {
+                "title": "No Results Found",
+                "description": "Oops! I couldn't find anything for: \"{query}\". Maybe try something else?"
+            },
+            "addedPlaylist": {
+                "title": "Added Playlist to Queue",
+                "tracks": "Tracks",
+                "requestedBy": "Requested by"
+            },
+            "addedTrack": {
+                "title": "Added to Queue",
+                "artist": "Artist",
+                "duration": "Duration",
+                "requestedBy": "Requested by"
+            },
+            "error": {
+                "title": "An Error Occurred",
+                "description": "Oops! Something went wrong while trying to play your music. Please try again!"
+            }
+        },
+        "previous": {
+            "noPrevious": {
+                "title": "No Previous Track",
+                "description": "Oops! There's no previous track to play!\nLet's keep the party going with the current one!"
+            },
+            "playing": {
+                "title": "Playing Previous Track",
+                "description": "Rewinding the musical journey back to the beginning!\nTime to groove to this awesome tune once more!"
+            }
+        },
+        "queue": {
+            "title": "Queue",
+            "nowPlaying": "Now Playing",
+            "upNext": "Up Next",
+            "noTracks": "No songs in queue",
+            "footer": "Showing first 10 tracks • Total tracks: {{total}}"
+        },
+        "replay": {
+            "noTrack": {
+                "title": "No Track Playing",
+                "description": "There's no track currently playing to replay!\nTry playing something first!"
+            },
+            "success": {
+                "title": "Replaying Track", 
+                "description": "Rewinding the musical journey back to the beginning!\nTime to groove to this awesome tune once more!"
+            }
+        },
+        "resume": {
+            "alreadyPlaying": {
+                "title": "Already Playing",
+                "description": "The music is already playing!\nLet's keep the party going!"
+            },
+            "success": {
+                "title": "Resumed",
+                "description": "The music has been resumed!\nLet's keep the party going!"
+            }
+        },
+        "rewind": {
+            "title": "Rewind",
+            "description": "Track rewound by 10 seconds!"
+        },
+        "search": {
+            "title": "Search Results for \"{{query}}\"",
+            "selectTrack": "Select a track",
+            "noQuery": {
+                "title": "Missing Query",
+                "description": "Please provide a search query!"
+            },
+            "invalidUrl": {
+                "title": "Invalid Search", 
+                "description": "Please use {{prefix}}play command for direct links. This command is for searching songs by name.",
+                "slashDescription": "Please use /play command for direct links. This command is for searching songs by name."
+            },
+            "missingPermissions": {
+                "title": "Missing Permissions",
+                "description": "I need permissions to join and speak in your voice channel!"
+            },
+            "noResults": {
+                "title": "No Results Found",
+                "description": "Oops! Looks like we couldn't find any tunes for that search.\nLet's try a different keyword or phrase!"
+            },
+            "notInSameVoice": {
+                "title": "Not in the Same Voice Channel",
+                "description": "Oops! We need to be in the same voice channel to jam together! Come join me where I am!"
+            },
+            "connectionError": {
+                "title": "Connection Error",
+                "description": "Failed to connect to voice channel. Please try again."
+            },
+            "error": {
+                "title": "Error",
+                "description": "An error occurred while searching for tracks."
+            },
+            "addedToQueue": {
+                "title": "Added to Queue"
+            },
+            "track": {
+                "title": "Track",
+                "artist": "Artist",
+                "duration": "Duration",
+                "requestedBy": "Requested by"
+            }
+        },
+        "seek": {
+            "title": "Seeked",
+            "description": "Seeked to: **{{position}}**!\nLet's keep the party going with the current one!",
+            "missingPosition": {
+                "title": "Missing Position",
+                "description": "Please specify a position to seek to (e.g. 1:30 or 90)"
+            },
+            "invalidFormat": {
+                "title": "Invalid Format", 
+                "description": "Please use minutes:seconds (e.g. 1:30) or seconds (e.g. 90)"
+            },
+            "cannotSeek": {
+                "title": "Cannot Seek",
+                "description": "Unable to determine track duration!"
+            },
+            "invalidPosition": {
+                "title": "Invalid Position",
+                "description": "Position must be between 0 and {{duration}}!"
+            }
+        },
+        "shuffle": {
+            "title": "Shuffled",
+            "description": "The queue just got a fresh mix! Your songs are now dancing to a new rhythm!",
+            "notEnoughSongs": {
+                "title": "Not Enough Songs in the Queue",
+                "description": "Oops! We need at least two songs in the queue to shuffle them around! Let's add some more tunes to the mix!"
+            }
+        },
+        "skip": {
+            "title": "Skipped",
+            "description": "Woosh! Moving on to {{nextTrack}}!\nReady for more musical magic?",
+            "nextTrack": "the next track",
+            "recommendedTrack": "an awesome recommended track",
+            "queueEmpty": {
+                "title": "Queue Empty",
+                "description": "That's a wrap! We've reached the end of our musical journey for now.\nTime for a fresh start with some new tunes!"
+            }
+        },
+        "stop": {
+            "title": "Music Stopped",
+            "description": "The party's wrapped up! I've cleared the queue and packed up the speakers.\nReady when you are for another musical adventure!",
+            "error": {
+                "title": "Error",
+                "description": "Whoopsie daisy! Looks like the music got a bit tangled up in its own rhythm.\nGive it another shot in a moment, when the beat's back in sync!"
+            }
+        },
+        "volume": {
+            "title": "Volume Set",
+            "description": "Turning up the vibes! Volume is now grooving at **{{volume}}%**",
+            "invalidVolume": {
+                "title": "Invalid Volume",
+                "description": "Please provide a valid volume level between 0 and 100!"
+            }
+        }
+    },
+    "playlist": {
+        "create": {
+            "title": "Playlist Created",
+            "description": "Created playlist: **{{name}}**",
+            "error": {
+                "title": "Error",
+                "description": "Please provide a playlist name!",
+                "exists": "A playlist with that name already exists!"
+            }
+        },
+        "list": {
+            "title": "Your Playlists",
+            "empty": {
+                "title": "No Playlists",
+                "description": "You don't have any playlists!"
+            }
+        },
+        "view": {
+            "error": {
+                "title": "Error",
+                "description": "Please provide a playlist name!",
+                "notFound": "Playlist not found!",
+                "empty": "No tracks in this playlist"
+            }
+        },
+        "add": {
+            "title": "Track Added",
+            "description": "{{message}} to playlist: **{{playlistName}}**",
+            "error": {
+                "title": "Error", 
+                "description": "Please provide a playlist name and query!",
+                "notFound": "Playlist not found!",
+                "noTracks": "No tracks found!",
+                "failed": "An error occurred while adding tracks to the playlist!"
+            },
+            "searching": "🔍 Searching..."
+        },
+        "remove": {
+            "title": "Track Removed",
+            "description": "Removed track from playlist: **{{name}}**",
+            "error": {
+                "title": "Error",
+                "description": "Please provide a playlist name and track number!",
+                "notFound": "Playlist not found!",
+                "invalidTrack": "Invalid track number!"
+            }
+        },
+        "delete": {
+            "title": "Playlist Deleted",
+            "description": "Deleted playlist: **{{name}}**",
+            "error": {
+                "title": "Error",
+                "description": "Please provide a playlist name!",
+                "notFound": "Playlist not found!"
+            }
+        },
+        "load": {
+            "title": "Playlist Loaded",
+            "description": "Loaded **{{trackCount}}** tracks from playlist: **{{name}}**",
+            "error": {
+                "title": "Error",
+                "description": "Please provide a playlist name!",
+                "notFound": "Playlist not found or empty!",
+                "noVoice": "You must be in a voice channel!"
+            },
+            "loading": "🔍 Loading playlist..."
+        },
+        "error": {
+            "title": "Error",
+            "description": "An error occurred while managing playlists!",
+            "invalidSubcommand": "Invalid subcommand! Use `create`, `list`, `view`, `add`, `remove`, `delete`, or `load`"
+        },
+        "embed": {
+            "name": "{{name}}'s Playlists",
+            "description": "{{description}}",
+            "footer": "Page {{page}}/{{pages}} • Total playlists: {{total}}",
+            "tracks": "Total tracks: {{total}}",
+            "track": "By: {{author}} • Duration: {{duration}}"
+        },
+        "buttons": {
+            "prev": "Previous",
+            "next": "Next",
+            "invalid": "You cannot use these buttons!"
+        }
+    }
+  }
+}

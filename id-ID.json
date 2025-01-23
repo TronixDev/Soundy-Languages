@@ -1,0 +1,745 @@
+{
+  "errors": {
+    "noPermission": "Anda tidak memiliki izin untuk menggunakan perintah ini!\nIzin yang diperlukan: {{permission}}",
+    "noMusic": "Tidak ada musik yang sedang diputar!",
+    "invalidValue": "Mohon berikan nilai {{type}} yang valid antara {{min}} dan {{max}}!",
+    "setupExists": "Panel kontrol sudah ada di server ini! Gunakan `setup delete` untuk menghapusnya terlebih dahulu.",
+    "noSetup": "Tidak ada pengaturan panel kontrol Soundy di server ini.",
+    "setupError": "Terjadi kesalahan saat {{action}} pengaturan.",
+    "filterError": "Terjadi kesalahan saat menerapkan filter.",
+    "premiumRequired": "Anda telah menggunakan semua perintah gratis Anda untuk hari ini!\n\nVote untuk Soundy untuk mendapatkan akses premium tak terbatas selama 14 jam:"
+  },
+  "success": {
+    "filterApplied": "Filter {{filter}} diterapkan!",
+    "languageSet": "Bahasa server telah diatur ke: {{language}}"
+  },
+  "music": {
+    "nowplaying": "Sedang Diputar",
+    "artist": "Artis",
+    "duration": "Durasi",
+    "requestedBy": "Diminta oleh",
+    "node": "Node",
+    "finishTime": "Waktu Selesai",
+    "status": "**{{title}}** oleh **{{artist}}**",
+    "moved": "Bot telah dipindahkan ke saluran suara",
+    "setup": {
+      "title": "Pemutar Musik Soundy",
+      "descriptions": "Bergabunglah dengan saluran suara dan antrian lagu berdasarkan nama atau url di saluran ini.",
+      "node": "Node",
+      "finishTime": "Waktu Selesai"
+    }
+  },
+  "commands": {
+    "requestedBy": "Diminta oleh {{user}}",
+    "configurations": {
+      "247": {
+        "enabled": "Mode 24/7 telah **diaktifkan**!\n\nSaya akan tetap berada di saluran suara tanpa batas waktu.",
+        "disabled": "Mode 24/7 telah **dinonaktifkan**!\n\nSaya akan meninggalkan saluran suara ketika tidak aktif.",
+        "error": "Terjadi kesalahan saat mengalihkan mode 24/7."
+      },
+      "language": {
+        "current": "Bahasa saat ini: `{{current}}`\nBahasa yang tersedia: {{available}}",
+        "invalid": "Kode bahasa tidak valid!\nBahasa yang tersedia: {{available}}",
+        "success": "Bahasa server telah diatur ke: `{{language}}`",
+        "error": "Gagal memperbarui bahasa. Silakan coba lagi."
+      },
+      "prefix": {
+        "current": "Prefix saat ini: `{{current}}`\nPrefix yang tersedia: {{available}}",
+        "invalid": "Prefix tidak valid!\nPrefix yang tersedia: {{available}}",
+        "success": "Prefix server telah diubah menjadi: `{{prefix}}`",
+        "error": "Terjadi kesalahan saat memperbarui prefix. Silakan coba lagi nanti.",
+        "reset": "Prefix server telah diatur ulang ke default: `{{prefix}}`",
+        "length": "Prefix tidak boleh lebih dari 5 karakter!"
+      },
+      "setup": {
+        "error": "Terjadi kesalahan saat membuat/menghapus saluran pengaturan.",
+        "noPermission": "Anda tidak memiliki izin untuk menggunakan perintah ini!\nIzin yang diperlukan: `MANAGE_CHANNELS`",
+        "botNoPermission": "Bot tidak memiliki izin yang diperlukan!\nIzin yang diperlukan: `MANAGE_CHANNELS`",
+        "help": "Perintah yang tersedia:\n`setup create` - Buat panel kontrol\n`setup delete` - Hapus panel kontrol",
+        "exists": "Panel kontrol sudah ada di server ini! Gunakan `setup delete` untuk menghapusnya terlebih dahulu.",
+        "noSetup": "Tidak ada pengaturan panel kontrol Soundy di server ini.",
+        "created": "Berhasil membuat panel kontrol Soundy di",
+        "deleted": "Berhasil menghapus panel kontrol Soundy!",
+        "deleteError": "Terjadi kesalahan saat menghapus pengaturan."
+      },
+      "voicestatus": {
+        "noPermission": "Anda tidak memiliki izin untuk menggunakan perintah ini!\nIzin yang diperlukan: `MANAGE_GUILD`",
+        "enabled": "Status suara telah **diaktifkan**!\n\nBot akan menampilkan lagu yang sedang diputar di status saluran suara.",
+        "disabled": "Status suara telah **dinonaktifkan**!\n\nBot tidak akan lagi menampilkan lagu yang sedang diputar di status saluran suara.",
+        "error": "Terjadi kesalahan saat mengalihkan status suara."
+      }
+    },
+    "filters": {
+      "noMusic": "Tidak ada musik yang sedang diputar!",
+      "success": "Filter audio {{filter}} diterapkan!",
+      "error": "Terjadi kesalahan saat menerapkan filter.",
+      "clear": {
+        "success": "Semua filter aktif telah dihapus!",
+        "error": "Terjadi kesalahan saat menghapus filter."
+      },
+      "reset": {
+        "success": "Semua filter telah diatur ulang ke nilai default!",
+        "error": "Terjadi kesalahan saat mengatur ulang filter."
+      },
+      "equalizer": {
+        "noBand": "Harap berikan nilai band (0-13) dan gain (-0.25 hingga 1.0)!",
+        "invalidBand": "Band harus antara 0 dan 13!",
+        "invalidGain": "Gain harus antara -0.25 dan 1.0!",
+        "success": "Mengatur Band **{{band}}** ke gain: **{{gain}}**"
+      },
+      "pitch": {
+        "noPitch": "Harap berikan nilai pitch yang valid antara 0.5 dan 2.0!",
+        "success": "Pitch diatur ke: **{{pitch}}x**",
+        "error": "Terjadi kesalahan saat mengatur pitch."
+      },
+      "rate": {
+        "noRate": "Harap berikan nilai rate yang valid antara 0.5 dan 2.0!",
+        "success": "Rate diatur ke: **{{rate}}x**",
+        "error": "Terjadi kesalahan saat mengatur rate."
+      },
+      "speed": {
+        "noSpeed": "Harap berikan nilai kecepatan yang valid antara 0.5 dan 2.0!",
+        "success": "Kecepatan diatur ke: **{{speed}}x**",
+        "error": "Terjadi kesalahan saat mengatur kecepatan."
+      }
+    },
+    "informations": {
+      "about": {
+        "description": "Saya adalah bot musik yang kaya fitur dirancang untuk memberikan pengalaman pemutaran musik berkualitas tinggi di Discord.",
+        "features": "Fitur Utama",
+        "featuresList": [
+          "Pemutaran musik berkualitas tinggi",
+          "Dukungan untuk berbagai sumber musik",
+          "Manajemen antrian lanjutan", 
+          "Sistem peran DJ",
+          "Daftar putar kustom",
+          "Dan masih banyak lagi!"
+        ],
+        "credits": "Kredit",
+        "creditsInfo": "- Dikontribusikan oleh: iaMJ\n- Dikembangkan oleh: Tronix Development\n- Negara: Indonesia",
+        "specialThanks": "Terima Kasih Khusus",
+        "specialThanksList": "- iaMJ: Pencipta Soundy\n- kydo: Untuk fitur autocomplete, Bug Fixer, dan kontribusi lainnya\n- L RMN: Untuk konfigurasi filter\n- Appu: Untuk ide bot",
+        "communities": "Komunitas",
+        "communitiesList": "Komunitas Tronix Development\nSemua kontributor dan pendukung",
+        "license": "Lisensi",
+        "licenseInfo": "Proyek ini dilisensikan di bawah GNU Affero General Public License v3.0",
+        "footer": "Dibuat dengan 🐈 oleh Tronix Development di Indonesia",
+        "notYourButton": "Tombol ini bukan untuk Anda!",
+        "error": "Terjadi kesalahan saat mengambil informasi bot.",
+        "aboutMe": "Tentang Saya",
+        "botName": "Tentang Soundy",
+        "contributorsTitle": "Kontributor Soundy",
+        "links": "Tautan",
+        "buttons": {
+          "about": "Tentang",
+          "contributors": "Kontributor",
+          "inviteBot": "Undang Bot",
+          "supportServer": "Server Dukungan",
+          "voteForMe": "Vote untuk saya",
+          "viewLicense": "Lihat Lisensi"
+        }
+      },
+      "faq": {
+        "title": "Pertanyaan yang Sering Diajukan",
+        "description": "Berikut adalah beberapa pertanyaan umum tentang Soundy:",
+        "questions": {
+          "invite": {
+            "question": "1. Bagaimana cara mengundang Soundy ke server saya?",
+            "answer": "Gunakan perintah `{{prefix}}invite` atau klik [di sini](https://discord.com/oauth2/authorize?client_id=1168385371294420992) untuk mengundang saya.",
+            "slashAnswer": "Gunakan perintah `/invite` atau klik [di sini](https://discord.com/oauth2/authorize?client_id=1168385371294420992) untuk mengundang saya."
+          },
+          "support": {
+            "question": "2. Bagaimana cara mendukung bot?",
+            "answer": "Anda dapat memberikan vote untuk Soundy di Top.gg menggunakan perintah `{{prefix}}vote`!",
+            "slashAnswer": "Anda dapat memberikan vote untuk Soundy di Top.gg menggunakan perintah `/vote`!"
+          },
+          "features": {
+            "question": "3. Apa saja fitur utama Soundy?",
+            "answer": "Soundy adalah bot musik yang powerful dengan pemutaran audio berkualitas tinggi, filter, dan antarmuka yang mudah digunakan!"
+          },
+          "bugs": {
+            "question": "4. Bagaimana cara melaporkan bug?",
+            "answer": "Bergabunglah dengan server dukungan kami dan laporkan masalah di saluran yang sesuai."
+          },
+          "suggestions": {
+            "question": "5. Bagaimana cara menyarankan fitur baru?",
+            "answer": "Bergabunglah dengan server dukungan kami untuk menyarankan fitur dan peningkatan baru."
+          },
+          "commands": {
+            "question": "6. Di mana saya dapat menemukan daftar lengkap perintah?",
+            "answer": "Gunakan perintah `{{prefix}}help` untuk melihat semua perintah dan kategori yang tersedia.",
+            "slashAnswer": "Gunakan perintah `/help` untuk melihat semua perintah dan kategori yang tersedia."
+          },
+          "troubleshooting": {
+            "question": "7. Bagaimana cara memperbaiki masalah pemutaran musik?",
+            "answer": "Jika Anda mengalami masalah saat memutar musik dengan Soundy, coba langkah-langkah berikut:\n1. Pastikan Anda berada di saluran suara\n2. Periksa apakah Soundy memiliki izin untuk bergabung dan berbicara\n3. Pastikan URL musik atau kueri pencarian valid\n4. Coba putuskan dan sambungkan kembali Soundy\n5. Jika masalah berlanjut, bergabunglah dengan server dukungan kami untuk mendapatkan bantuan"
+          },
+          "filters": {
+            "question": "8. Bagaimana cara menggunakan filter?",
+            "answer": "Soundy menawarkan berbagai filter audio seperti nightcore, bassboost, 8D, dll. Gunakan perintah yang sesuai (mis., `{{prefix}}nightcore`, `{{prefix}}bassboost`) saat musik sedang diputar.",
+            "slashAnswer": "Soundy menawarkan berbagai filter audio seperti nightcore, bassboost, 8D, dll. Gunakan perintah yang sesuai (mis., `/nightcore`, `/bassboost`) saat musik sedang diputar."
+          }
+        }
+      },
+      "help": {
+        "title": "Menu Bantuan Soundy",
+        "description": "Berikut adalah semua perintah dan kategori yang tersedia:",
+        "noDescription": "Tidak ada deskripsi tersedia",
+        "mainMenu": {
+          "title": "Menu Bantuan Soundy",
+          "greeting": {
+            "1": "**Haii!**",
+            "2": "**Saya**",
+            "3": "**teman musik Anda!**"
+          },
+          "description": "**Soundy adalah bot musik yang dirancang untuk memberikan pengalaman mendengarkan musik yang luar biasa di Discord. Dengan fitur-fiturnya yang komprehensif dan mudah digunakan, Soundy adalah pilihan sempurna untuk server Discord Anda.**",
+          "categories": {
+            "configurations": "Konfigurasi",
+            "devs": "Pengembang",
+            "filters": "Filter",
+            "informations": "Informasi",
+            "music": "Musik",
+            "playlists": "Daftar Putar"
+          },
+          "selectPrompt": "**Pilih Kategori Dari Menu Di Bawah.**",
+          "footer": "Terima kasih telah memilih Soundy!"
+        },
+        "categoryMenu": {
+          "title": "Perintah {{category}}",
+          "titleWithPages": "Perintah {{category}} (Halaman {{current}}/{{total}})",
+          "description": "Daftar perintah yang tersedia dalam kategori ini:",
+          "notYourMenu": "Menu ini bukan untuk Anda!",
+          "error": "Ups! Sepertinya saya mengalami kesalahan saat mencoba membantu Anda. \nSirkuit saya mungkin sedikit kelebihan beban saat ini. \nBisakah Anda mencoba lagi nanti? Jika masalah berlanjut, \nharap beri tahu pembuat saya. Gomen nasai!"
+        }
+      },
+      "info": {
+        "mainMenu": {
+          "title": "Menu Info Soundy",
+          "description": {
+            "1": "**Halo!**",
+            "2": "**Selamat datang di Menu Info!**",
+            "3": "**Di sini Anda dapat menemukan informasi detail tentang berbagai aspek Soundy:**",
+            "4": "**Informasi Klien**",
+            "5": "**Statistik**",
+            "6": "**Informasi Sistem**",
+            "7": "**Semua Informasi**",
+            "8": "**Pilih Kategori Dari Menu Di Bawah.**",
+            "9": "Undang Saya",
+            "10": "Server Dukungan"
+          }
+        },
+        "categories": {
+          "client": {
+            "title": "Informasi Klien",
+            "fields": {
+              "username": "Nama Pengguna",
+              "apiLatency": "Latensi API",
+              "responseTime": "Waktu Respons",
+              "uptime": "Waktu Aktif",
+              "discordjs": "Discord.js"
+            }
+          },
+          "stats": {
+            "title": "Statistik",
+            "fields": {
+              "serverCount": "Jumlah Server",
+              "userCount": "Jumlah Pengguna",
+              "channelCount": "Jumlah Saluran",
+              "activePlayers": "Pemain Aktif",
+              "connectedNodes": "Node Terhubung"
+            }
+          },
+          "system": {
+            "title": "Informasi Sistem",
+            "fields": {
+              "os": "OS",
+              "cpu": "CPU",
+              "vcore": "vCore",
+              "ram": "RAM",
+              "memoryUsage": "Penggunaan Memori",
+              "bun": "Bun"
+            }
+          },
+          "all": "Semua Informasi"
+        },
+        "selectMenu": {
+          "placeholder": "Pilih kategori informasi",
+          "options": {
+            "mainMenu": {
+              "label": "Menu Utama",
+              "description": "Kembali ke menu utama"
+            },
+            "clientInfo": {
+              "label": "Informasi Klien",
+              "description": "Lihat informasi klien bot"
+            },
+            "statsInfo": {
+              "label": "Statistik",
+              "description": "Lihat statistik bot"
+            },
+            "systemInfo": {
+              "label": "Informasi Sistem",
+              "description": "Lihat informasi sistem"
+            },
+            "allInfo": {
+              "label": "Semua Informasi",
+              "description": "Lihat semua informasi bot"
+            }
+          }
+        },
+        "errors": {
+          "notYourMenu": "Menu ini bukan untuk Anda!",
+          "generic": "Terjadi kesalahan saat mengambil informasi bot."
+        }
+      },
+      "node": {
+        "title": "Status Node Soundy",
+        "description": "Pilih node dari menu di bawah untuk melihat informasi detail",
+        "footer": "Informasi Status Node",
+        "selectMenu": {
+          "placeholder": "Pilih node untuk dilihat",
+          "status": {
+            "connected": "Terhubung",
+            "disconnected": "Terputus"
+          }
+        },
+        "nodeInfo": {
+          "players": "Pemain",
+          "playingPlayers": "Pemain yang Bermain",
+          "uptime": "Waktu Aktif",
+          "cpu": {
+            "title": "CPU",
+            "cores": "Core",
+            "systemLoad": "Beban Sistem",
+            "lavalinkLoad": "Beban Lavalink"
+          },
+          "memory": {
+            "title": "Memori",
+            "used": "Digunakan",
+            "reservable": "Dapat Direservasi"
+          }
+        },
+        "errors": {
+          "notYourMenu": "Menu ini bukan untuk Anda!",
+          "nodeNotFound": "Node tidak ditemukan!"
+        }
+      },
+      "ping": {
+        "title": "Latensi Bot",
+        "pinging": "Mengukur ping...",
+        "footer": "Informasi Latensi Soundy",
+        "latency": "Latensi",
+        "apiLatency": "Latensi API"
+      },
+      "vote": {
+        "title": "Vote untuk Soundy!",
+        "description": {
+          "header": "Dukung bot dengan memberikan vote di Top.gg!",
+          "note": "Catatan: Anda dapat memberikan vote setiap 12 jam!",
+          "voteLink": "Tautan Vote: [Klik di sini untuk vote]",
+          "message": "Anda luar biasa karena telah memilih kami! Semoga hari Anda dipenuhi dengan lagu-lagu fantastis dan getaran yang baik. Mari terus mainkan musiknya!"
+        },
+        "footer": "Terima kasih atas dukungan Anda!",
+        "buttons": {
+          "vote": "Vote",
+          "invite": "Undang"
+        }
+      }
+    },
+    "music": {
+        "noPlayer": {
+            "title": "Tidak Ada Pemain Aktif",
+            "description": "Ups! Tidak ada pesta musik yang sedang berlangsung di sini sekarang.\nCoba putar beberapa lagu terlebih dahulu!"
+        },
+        "notInVoice": {
+            "title": "Tidak Berada di Saluran Suara",
+            "description": "Hai, penjelajah musik!\nSepertinya Anda mengambang di ruang digital - bergabunglah dengan saluran suara terlebih dahulu dan mari kita temukan beberapa lagu keren bersama!"
+        },
+        "notInSameVoice": {
+            "title": "Tidak Berada di Saluran Suara yang Sama",
+            "description": "Ups! Kita perlu berada di saluran suara yang sama untuk bermusik bersama! Ayo bergabung dengan saya di tempat saya berada!"
+        },
+        "noTracks": {
+            "title": "Tidak Ada Lagu dalam Antrian",
+            "description": "Panggung kosong dan menunggu pilihan musik Anda!\nTambahkan beberapa lagu untuk membuat daftar putar sempurna Anda."
+        },
+        "notForYou": "Menu ini bukan untuk Anda!",
+        "autoplay": {
+          "enabled": "Mode autoplay sekarang **diaktifkan**!",
+          "disabled": "Mode autoplay sekarang **dinonaktifkan**!",
+          "error": "Ups! Terjadi kesalahan saat mengalihkan autoplay. Silakan coba lagi!"
+        },
+        "clearqueue": {
+          "title": "Antrian Dibersihkan",
+          "description": "Semua lagu telah dihapus dari antrian!\nSiap untuk beberapa lagu baru?",
+          "alreadyEmpty": {
+            "title": "Antrian Sudah Kosong",
+            "description": "Antrian sudah kosong! Tidak ada yang perlu dibersihkan di sini."
+          }
+        },
+        "forward": {
+            "title": "Lagu Dimajukan",
+            "description": "Lagu dimajukan 10 detik!",
+            "error": {
+                "title": "Tidak Dapat Maju Melewati Durasi Lagu",
+                "description": "Ups! Kita tidak bisa maju melewati durasi lagu! Mari tetap dalam irama!"
+            }
+        },
+        "grab": {
+            "title": "Lagu Disimpan",
+            "description": "Kejutan musik menunggu Anda di DM! Cek sekarang!",
+            "np": "Sedang Diputar",
+            "songInfo": {
+                "title": "Judul",
+                "url": "URL",
+                "duration": "Durasi",
+                "requestedBy": "Diminta oleh"
+            },
+            "error": {
+                "title": "Tidak Dapat Mengirim DM",
+                "description": "Ups! Sepertinya benteng DM Anda tidak dapat ditembus. Sesuaikan pengaturan privasi Anda untuk menerima pesan melodis!"
+            },
+            "sentToDM": {
+                "title": "Lagu Disimpan!",
+                "description": "Saya telah mengirim detail lagu ke DM Anda!"
+            },
+            "footer": "Nikmati musiknya! 🎧"
+        },
+        "join": {
+            "success": {
+                "title": "Berhasil Bergabung",
+                "description": "Woohoo! Saya telah bergabung dengan pesta di {channel}! Saatnya menaikkan volume dan membuat keajaiban musik terjadi!"
+            },
+            "failed": {
+                "title": "Gagal Bergabung",
+                "description": "Ups! Sepertinya saya mengalami nada sumbang saat mencoba bergabung! Kesulitan teknis: {error}"
+            }
+        },
+        "leave": {
+            "title": "Meninggalkan Saluran Suara",
+            "description": "Pesta telah selesai! Saya telah membersihkan antrian dan meninggalkan saluran.\nSiap kapan saja untuk petualangan musik lainnya!",
+            "error": {
+                "title": "Kesalahan",
+                "description": "Ups! Sepertinya musik sedikit tersangkut dalam iramanya sendiri.\nCoba lagi sebentar lagi, ketika irama kembali sinkron!"
+            }
+        },
+        "loop": {
+            "title": "Mode Pengulangan",
+            "description": "Pilih mode pengulangan dari menu di bawah!",
+            "modes": {
+                "disabled": "Mode pengulangan: **Dinonaktifkan**",
+                "track": "Mode pengulangan: **Lagu**",
+                "queue": "Mode pengulangan: **Antrian**"
+            },
+            "menu": {
+                "placeholder": "Pilih mode pengulangan",
+                "options": {
+                    "disable": {
+                        "label": "Nonaktifkan",
+                        "description": "Nonaktifkan semua mode pengulangan"
+                    },
+                    "track": {
+                        "label": "Lagu",
+                        "description": "Ulangi lagu saat ini"
+                    },
+                    "queue": {
+                        "label": "Antrian",
+                        "description": "Ulangi seluruh antrian"
+                    }
+                }
+            },
+            "timeout": {
+                "title": "Pemilihan Pengulangan Kehabisan Waktu",
+                "description": "Ups! Sepertinya Anda tidak membuat pilihan tepat waktu!"
+            }
+        },
+        "lyrics": {
+            "title": "Lirik untuk {{song}}",
+            "searching": "Mencari lirik...",
+            "noQuery": {
+                "description": "Harap berikan nama lagu atau putar lagu terlebih dahulu!"
+            },
+            "invalidUrl": {
+                "description": "Tidak dapat menyelesaikan URL musik."
+            },
+            "notFound": {
+                "description": "Tidak ditemukan lirik untuk lagu ini."
+            },
+            "error": {
+                "description": "Gagal mengambil lirik. Silakan coba lagi nanti."
+            }
+        },
+        "nowplaying": {
+            "title": "Sedang Diputar",
+            "artist": "Artis",
+            "duration": "Durasi",
+            "requestedBy": "Diminta oleh"
+        },
+        "pause": {
+            "alreadyPaused": {
+                "title": "Sudah Dijeda",
+                "description": "Melodi sudah dalam jeda yang menyenangkan!\nSeperti musik sedang tidur siang yang damai."
+            },
+            "paused": {
+                "title": "Dijeda",
+                "description": "Irama telah dijeda dengan lembut!\nPerjalanan musik Anda sedang dalam jeda magis."
+            }
+        },
+        "play": {
+            "noQuery": {
+                "title": "Kueri Tidak Ada",
+                "description": "Hai! Harap berikan nama lagu atau URL untuk saya putar."
+            },
+            "missingPermissions": {
+                "title": "Izin Tidak Ada",
+                "description": "Saya tidak memiliki izin untuk bergabung dan berbicara di saluran suara Anda!"
+            },
+            "connectionError": {
+                "title": "Kesalahan Koneksi",
+                "description": "Gagal terhubung ke saluran suara. Silakan coba lagi."
+            },
+            "noResults": {
+                "title": "Tidak Ditemukan Hasil",
+                "description": "Ups! Saya tidak dapat menemukan apa pun untuk: \"{query}\". Mungkin coba yang lain?"
+            },
+            "addedPlaylist": {
+                "title": "Daftar Putar Ditambahkan ke Antrian",
+                "tracks": "Lagu",
+                "requestedBy": "Diminta oleh"
+            },
+            "addedTrack": {
+                "title": "Ditambahkan ke Antrian",
+                "artist": "Artis",
+                "duration": "Durasi",
+                "requestedBy": "Diminta oleh"
+            },
+            "error": {
+                "title": "Terjadi Kesalahan",
+                "description": "Ups! Terjadi kesalahan saat mencoba memutar musik Anda. Silakan coba lagi!"
+            }
+        },
+        "previous": {
+            "noPrevious": {
+                "title": "Tidak Ada Lagu Sebelumnya",
+                "description": "Ups! Tidak ada lagu sebelumnya untuk diputar!\nMari lanjutkan pesta dengan yang sekarang!"
+            },
+            "playing": {
+                "title": "Memutar Lagu Sebelumnya",
+                "description": "Mengembalikan perjalanan musik kembali ke awal!\nWaktunya untuk bergoyang dengan lagu keren ini sekali lagi!"
+            }
+        },
+        "queue": {
+            "title": "Antrian",
+            "nowPlaying": "Sedang Diputar",
+            "upNext": "Berikutnya",
+            "noTracks": "Tidak ada lagu dalam antrian",
+            "footer": "Menampilkan 10 lagu pertama • Total lagu: {{total}}"
+        },
+        "replay": {
+            "noTrack": {
+                "title": "Tidak Ada Lagu yang Diputar",
+                "description": "Tidak ada lagu yang sedang diputar untuk diulang!\nCoba putar sesuatu terlebih dahulu!"
+            },
+            "success": {
+                "title": "Mengulang Lagu",
+                "description": "Mengulang perjalanan musik kembali ke awal!\nSaatnya bergoyang dengan lagu keren ini sekali lagi!"
+            }
+        },
+        "resume": {
+            "alreadyPlaying": {
+                "title": "Sudah Diputar",
+                "description": "Musik sudah diputar!\nMari lanjutkan pestanya!"
+            },
+            "success": {
+                "title": "Dilanjutkan",
+                "description": "Musik telah dilanjutkan!\nMari lanjutkan pestanya!"
+            }
+        },
+        "rewind": {
+            "title": "Mundur",
+            "description": "Lagu dimundurkan 10 detik!"
+        },
+        "search": {
+            "title": "Hasil Pencarian untuk \"{{query}}\"",
+            "selectTrack": "Pilih sebuah lagu",
+            "noQuery": {
+                "title": "Query Tidak Ada",
+                "description": "Mohon berikan query pencarian!"
+            },
+            "invalidUrl": {
+                "title": "Pencarian Tidak Valid",
+                "description": "Mohon gunakan perintah {{prefix}}play untuk tautan langsung. Perintah ini untuk mencari lagu berdasarkan nama.",
+                "slashDescription": "Mohon gunakan perintah /play untuk tautan langsung. Perintah ini untuk mencari lagu berdasarkan nama."
+            },
+            "missingPermissions": {
+                "title": "Izin Tidak Mencukupi",
+                "description": "Saya membutuhkan izin untuk bergabung dan berbicara di saluran suara Anda!"
+            },
+            "noResults": {
+                "title": "Tidak Ditemukan Hasil",
+                "description": "Ups! Sepertinya kami tidak dapat menemukan lagu untuk pencarian itu.\nMari coba kata kunci atau frasa yang berbeda!"
+            },
+            "notInSameVoice": {
+                "title": "Tidak di Saluran Suara yang Sama",
+                "description": "Ups! Kita perlu berada di saluran suara yang sama untuk bermusik bersama! Ayo bergabung dengan saya di sini!"
+            },
+            "connectionError": {
+                "title": "Kesalahan Koneksi",
+                "description": "Gagal terhubung ke saluran suara. Silakan coba lagi."
+            },
+            "error": {
+                "title": "Kesalahan",
+                "description": "Terjadi kesalahan saat mencari lagu."
+            },
+            "addedToQueue": {
+                "title": "Ditambahkan ke Antrian"
+            },
+            "track": {
+                "title": "Lagu",
+                "artist": "Artis",
+                "duration": "Durasi",
+                "requestedBy": "Diminta oleh"
+            }
+        },
+        "seek": {
+            "title": "Melompat",
+            "description": "Melompat ke: **{{position}}**!\nMari lanjutkan pesta dengan lagu yang sedang diputar!",
+            "missingPosition": {
+                "title": "Posisi Tidak Ada",
+                "description": "Mohon tentukan posisi untuk melompat (contoh: 1:30 atau 90)"
+            },
+            "invalidFormat": {
+                "title": "Format Tidak Valid",
+                "description": "Mohon gunakan menit:detik (contoh: 1:30) atau detik (contoh: 90)"
+            },
+            "cannotSeek": {
+                "title": "Tidak Dapat Melompat",
+                "description": "Tidak dapat menentukan durasi lagu!"
+            },
+            "invalidPosition": {
+                "title": "Posisi Tidak Valid",
+                "description": "Posisi harus antara 0 dan {{duration}}!"
+            }
+        },
+        "shuffle": {
+            "title": "Diacak",
+            "description": "Antrian baru saja mendapat campuran baru! Lagu-lagu Anda sekarang menari dengan irama baru!",
+            "notEnoughSongs": {
+                "title": "Lagu dalam Antrian Tidak Cukup",
+                "description": "Ups! Kita membutuhkan setidaknya dua lagu dalam antrian untuk mengacaknya! Mari tambahkan lebih banyak lagu ke dalam campuran!"
+            }
+        },
+        "skip": {
+            "title": "Dilewati",
+            "description": "Wush! Beralih ke {{nextTrack}}!\nSiap untuk keajaiban musik lainnya?",
+            "nextTrack": "lagu berikutnya",
+            "recommendedTrack": "lagu yang direkomendasikan",
+            "queueEmpty": {
+                "title": "Antrian Kosong",
+                "description": "Sudah selesai! Kita telah mencapai akhir perjalanan musik kita untuk saat ini.\nSaatnya memulai yang baru dengan lagu-lagu baru!"
+            }
+        },
+        "stop": {
+            "title": "Musik Dihentikan",
+            "description": "Pesta telah selesai! Saya telah mengosongkan antrian dan membereskan speaker.\nSiap kapan saja untuk petualangan musik lainnya!",
+            "error": {
+                "title": "Kesalahan",
+                "description": "Ups! Sepertinya musik sedikit tersangkut dalam iramanya sendiri.\nCoba lagi sebentar lagi, ketika iramanya sudah kembali sinkron!"
+            }
+        },
+        "volume": {
+            "title": "Volume Diatur",
+            "description": "Menaikkan suasana! Volume sekarang bergoyang di **{{volume}}%**",
+            "invalidVolume": {
+                "title": "Volume Tidak Valid",
+                "description": "Mohon berikan level volume yang valid antara 0 dan 100!"
+            }
+        }
+    },
+    "playlist": {
+        "create": {
+            "title": "Daftar Putar Dibuat",
+            "description": "Membuat daftar putar: **{{name}}**",
+            "error": {
+                "title": "Kesalahan",
+                "description": "Mohon berikan nama daftar putar!",
+                "exists": "Daftar putar dengan nama itu sudah ada!"
+            }
+        },
+        "list": {
+            "title": "Daftar Putar Anda",
+            "empty": {
+                "title": "Tidak Ada Daftar Putar",
+                "description": "Anda tidak memiliki daftar putar!"
+            }
+        },
+        "view": {
+            "error": {
+                "title": "Kesalahan",
+                "description": "Mohon berikan nama daftar putar!",
+                "notFound": "Daftar putar tidak ditemukan!",
+                "empty": "Tidak ada lagu dalam daftar putar ini"
+            }
+        },
+        "add": {
+            "title": "Lagu Ditambahkan",
+            "description": "{{message}} ke daftar putar: **{{playlistName}}**",
+            "error": {
+                "title": "Kesalahan",
+                "description": "Mohon berikan nama daftar putar dan query!",
+                "notFound": "Daftar putar tidak ditemukan!",
+                "noTracks": "Tidak ditemukan lagu!",
+                "failed": "Terjadi kesalahan saat menambahkan lagu ke daftar putar!"
+            },
+            "searching": "🔍 Mencari..."
+        },
+        "remove": {
+            "title": "Lagu Dihapus",
+            "description": "Menghapus lagu dari daftar putar: **{{name}}**",
+            "error": {
+                "title": "Kesalahan",
+                "description": "Mohon berikan nama daftar putar dan nomor lagu!",
+                "notFound": "Daftar putar tidak ditemukan!",
+                "invalidTrack": "Nomor lagu tidak valid!"
+            }
+        },
+        "delete": {
+            "title": "Daftar Putar Dihapus",
+            "description": "Menghapus daftar putar: **{{name}}**",
+            "error": {
+                "title": "Kesalahan",
+                "description": "Mohon berikan nama daftar putar!",
+                "notFound": "Daftar putar tidak ditemukan!"
+            }
+        },
+        "load": {
+            "title": "Daftar Putar Dimuat",
+            "description": "Memuat **{{trackCount}}** lagu dari daftar putar: **{{name}}**",
+            "error": {
+                "title": "Kesalahan",
+                "description": "Mohon berikan nama daftar putar!",
+                "notFound": "Daftar putar tidak ditemukan atau kosong!",
+                "noVoice": "Anda harus berada di saluran suara!"
+            },
+            "loading": "🔍 Memuat daftar putar..."
+        },
+        "error": {
+            "title": "Kesalahan",
+            "description": "Terjadi kesalahan saat mengelola daftar putar!",
+            "invalidSubcommand": "Subperintah tidak valid! Gunakan `create`, `list`, `view`, `add`, `remove`, `delete`, atau `load`"
+        },
+        "embed": {
+            "name": "Daftar Putar {{name}}",
+            "description": "{{description}}",
+            "footer": "Halaman {{page}}/{{pages}} • Total daftar putar: {{total}}",
+            "tracks": "Total lagu: {{total}}",
+            "track": "Oleh: {{author}} • Durasi: {{duration}}"
+        },
+        "buttons": {
+            "prev": "Sebelumnya",
+            "next": "Berikutnya",
+            "invalid": "Anda tidak dapat menggunakan tombol ini!"
+        }
+    }
+  }
+}
