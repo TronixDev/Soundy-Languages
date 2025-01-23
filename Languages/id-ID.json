@@ -20,7 +20,7 @@
     "requestedBy": "Diminta oleh",
     "node": "Node",
     "finishTime": "Waktu Selesai",
-    "status": "**{{title}}** oleh **{{artist}}**",
+    "status": "oleh",
     "moved": "Bot telah dipindahkan ke saluran suara",
     "setup": {
       "title": "Pemutar Musik Soundy",

@@ -20,7 +20,7 @@
     "requestedBy": "リクエスト者",
     "node": "ノード",
     "finishTime": "終了時間",
-    "status": "**{{artist}}**による**{{title}}**",
+    "status": "による",
     "moved": "ボットがボイスチャンネルに移動しました",
     "setup": {
       "title": "Soundy ミュージックプレーヤー",
