@@ -20,7 +20,7 @@
     "requestedBy": "Requested by",
     "node": "Node",
     "finishTime": "Finish Time",
-    "status": "**{{title}}** by **{{artist}}**",
+    "status": "by", "_example": "プリズム by AmPm",
     "moved": "Bot has been moved to voice channel",
     "setup": {
       "title": "Soundy Music Player",
@@ -58,7 +58,7 @@
         "help": "Available commands:\n`setup create` - Create control panel\n`setup delete` - Delete control panel",
         "exists": "A control panel already exists in this server! Use `setup delete` to remove it first.",
         "noSetup": "There is no Soundy control panel setup in this server.",
-        "created": "Successfully created the Soundy control panel in",
+        "created": "Successfully created the Soundy control panel in", "_example": "Successfully created the Soundy control panel in #control-panel",
         "deleted": "Successfully deleted the Soundy control panel!",
         "deleteError": "An error occurred while deleting the setup."
       },
@@ -188,6 +188,7 @@
         "mainMenu": {
           "title": "Soundy Help Menu",
           "greeting": {
+            "_example": "Haii! @iaMJ I'm @Soundy your musical companion!",
             "1": "**Haii!**",
             "2": "**I'm**",
             "3": "**your musical companion!**"
@@ -216,9 +217,12 @@
         "mainMenu": {
           "title": "Soundy Info Menu",
           "description": {
+            "_example": "Hello! @iaMJ, Welcome to the Info Menu!",
             "1": "**Hello!**",
             "2": "**Welcome to the Info Menu!**",
+
             "3": "**Here you can find detailed information about Soundy's various aspects:**",
+            
             "4": "**Client Information**",
             "5": "**Statistics**",
             "6": "**System Information**",
@@ -236,7 +240,9 @@
               "apiLatency": "API Latency", 
               "responseTime": "Response Time",
               "uptime": "Uptime",
-              "discordjs": "Discord.js"
+              "discordjs": "Discord.js",
+              "cluster": "Cluster",
+              "shard": "Shard"
             }
           },
           "stats": {
@@ -257,7 +263,8 @@
               "vcore": "vCore",
               "ram": "RAM",
               "memoryUsage": "Memory Usage",
-              "bun": "Bun"
+              "bun": "Bun",
+              "node": "Node.js"
             }
           },
           "all": "All Information"

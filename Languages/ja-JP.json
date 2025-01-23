@@ -236,7 +236,9 @@
               "apiLatency": "APIレイテンシー",
               "responseTime": "応答時間",
               "uptime": "稼働時間",
-              "discordjs": "Discord.js"
+              "discordjs": "Discord.js",
+              "cluster": "クラスター",
+              "shard": "シャード"
             }
           },
           "stats": {
@@ -257,7 +259,8 @@
               "vcore": "vCore",
               "ram": "RAM",
               "memoryUsage": "メモリ使用量",
-              "bun": "Bun"
+              "bun": "Bun",
+              "node": "Node.js"
             }
           },
           "all": "すべての情報"
