@@ -246,7 +246,9 @@
               "userCount": "Jumlah Pengguna",
               "channelCount": "Jumlah Saluran",
               "activePlayers": "Pemain Aktif",
-              "connectedNodes": "Node Terhubung"
+              "connectedNodes": "Node Terhubung",
+              "cluster": "Cluster",
+              "shard": "Shard"
             }
           },
           "system": {
@@ -257,7 +259,8 @@
               "vcore": "vCore",
               "ram": "RAM",
               "memoryUsage": "Penggunaan Memori",
-              "bun": "Bun"
+              "bun": "Bun",
+              "node": "Node.js"
             }
           },
           "all": "Semua Informasi"
