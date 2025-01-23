@@ -344,6 +344,11 @@
           "vote": "投票",
           "invite": "招待"
         }
+      },
+      "translators": {
+        "title": "ボット翻訳者",
+        "description": "以下は、このボットを翻訳したすべての素晴らしい人々です。",
+        "contribute": "翻訳に貢献"
       }
     },
     "music": {

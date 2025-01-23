@@ -344,6 +344,11 @@
           "vote": "Vote",
           "invite": "Undang"
         }
+      },
+      "translators": {
+        "title": "Penerjemah Bot",
+        "description": "Berikut adalah semua orang yang membantu menerjemahkan bot ini:",
+        "contribute": "Kontribusi Terjemahan"
       }
     },
     "music": {

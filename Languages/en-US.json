@@ -344,6 +344,11 @@
           "vote": "Vote",
           "invite": "Invite"
         }
+      },
+      "translators": {
+        "title": "Bot Translators",
+        "description": "Here are all the amazing people who helped translate this bot:",
+        "contribute": "Contribute Translation"
       }
     },
     "music": {
