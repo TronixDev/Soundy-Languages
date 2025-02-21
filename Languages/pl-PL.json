@@ -237,7 +237,9 @@
               "apiLatency": "API Latency",
               "responseTime": "Response Time",
               "uptime": "Uptime",
-              "discordjs": "Discord.js"
+              "discordjs": "Discord.js",
+              "cluster": "Cluster",
+              "shard": "Shard"
             }
           },
           "stats": {
@@ -247,9 +249,7 @@
               "userCount": "Liczba użytkowników",
               "channelCount": "Liczba kanałów",
               "activePlayers": "Aktywni gracze",
-              "connectedNodes": "Połączone węzły",
-              "cluster": "Cluster",
-              "shard": "Shard"
+              "connectedNodes": "Połączone węzły"
             }
           },
           "system": {

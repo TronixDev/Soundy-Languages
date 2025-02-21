@@ -11,6 +11,7 @@
 - [x] English (US) - `en-US.json` (Default)
 - [x] Indonesian - `id-ID.json` [by @iaMJ](https://github.com/idMJA) 
 - [x] Japanese - `ja-JP.json` [by @iaMJ](https://github.com/idMJA) (Not Accurate)
+- [x] Polish - `pl-PL.json` [by @JellyTyan](https://github.com/JellyTyan) 
 
 ## Translation Rules
 
